@@ -1,36 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitMessage, setSubmitMessage] = useState('')
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setSubmitMessage('Thank you for your message! We will get back to you within 24 hours.')
-      setFormData({ name: '', email: '', message: '' })
-      
-      // Clear message after 5 seconds
-      setTimeout(() => setSubmitMessage(''), 5000)
-    }, 2000)
-  }
-
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -51,12 +21,12 @@ const Contact = () => {
             <div className="space-y-6">
               <div className="bg-blue-50 rounded-lg p-6">
                 <h4 className="font-semibold text-blue-800 mb-2">Boys Management</h4>
-                <p className="text-blue-700 text-lg">+92 330 4204892, +92 300 4475506 </p>
+                <p className="text-blue-700 text-lg">+92 330 4204892, +92 300 4475506</p>
                 <p className="text-blue-600 text-sm">scil.olympiad.info@gmail.com</p>
               </div>
               
               <div className="bg-pink-50 rounded-lg p-6">
-                <h4 className="font-semibold text-pink-800 mb-2">Girls Management</h4>
+                <h4 className="font-semibold text-pink-800 mb-2">Girls Coordinator</h4>
                 <p className="text-pink-700 text-lg">+92 334 8078553, +92 335 1557196</p>
                 <p className="text-pink-600 text-sm">scil.olympiad.info@gmail.com</p>
               </div>
@@ -71,7 +41,7 @@ const Contact = () => {
 
               <div className="bg-green-50 rounded-lg p-6">
                 <h4 className="font-semibold text-green-800 mb-2">Website</h4>
-                <p className="text-green-700 text-lg">scilolympiad.info</p>
+                <p className="text-green-700 text-lg">scilolympiad.com</p>
                 <p className="text-green-600 text-sm">Visit our website for more information</p>
               </div>
             </div>
@@ -97,80 +67,58 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
+          {/* Instagram & Social Media Section */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">Send us a Message</h3>
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">Follow Us</h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  Full Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
-                  placeholder="Enter your full name"
-                />
+            <div className="space-y-6">
+              <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg p-6">
+                <h4 className="font-semibold mb-2 text-lg">Girls Instagram</h4>
+                <a 
+                  href="https://instagram.com/scilolympiadgirls" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 hover:opacity-90 transition-opacity duration-200"
+                >
+                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                  <div>
+                    <p className="text-lg font-semibold">@scilolympiadgirls</p>
+                    <p className="text-purple-100 text-sm">Follow for girls event updates</p>
+                  </div>
+                </a>
               </div>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
-                  placeholder="Enter your email address"
-                />
+              <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg p-6">
+                <h4 className="font-semibold mb-2 text-lg">Boys Instagram</h4>
+                <a 
+                  href="https://instagram.com/scilolympiadboys" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 hover:opacity-90 transition-opacity duration-200"
+                >
+                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                  <div>
+                    <p className="text-lg font-semibold">@scilolympiadboys</p>
+                    <p className="text-blue-100 text-sm">Follow for boys event updates</p>
+                  </div>
+                </a>
               </div>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows="6"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
-                  placeholder="Enter your message or inquiry..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 disabled:bg-blue-400 transition-colors duration-200 flex items-center justify-center gap-2"
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                    Sending...
-                  </>
-                ) : (
-                  'Send Message'
-                )}
-              </button>
-
-              {submitMessage && (
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-green-700">
-                  {submitMessage}
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h4 className="font-semibold text-gray-800 mb-4">Quick Contact</h4>
+                <p className="text-gray-600 mb-4">
+                  Prefer direct communication? Reach out to our coordinators via phone or email for immediate assistance.
+                </p>
+                <div className="space-y-2 text-sm text-gray-700">
+                  <p>📞 Call during office hours: 9 AM - 5 PM</p>
+                  <p>📧 Email responses within 24 hours</p>
                 </div>
-              )}
-            </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
