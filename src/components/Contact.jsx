@@ -56,7 +56,7 @@ const Contact = () => {
               </div>
               
               <div className="bg-pink-50 rounded-lg p-6">
-                <h4 className="font-semibold text-pink-800 mb-2">Girls Coordinator</h4>
+                <h4 className="font-semibold text-pink-800 mb-2">Girls Management</h4>
                 <p className="text-pink-700 text-lg">+92 334 8078553, +92 335 1557196</p>
                 <p className="text-pink-600 text-sm">scil.olympiad.info@gmail.com</p>
               </div>
