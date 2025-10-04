@@ -33,9 +33,8 @@ const Contact = () => {
               
               <div className="bg-gray-50 rounded-lg p-6">
                 <h4 className="font-semibold text-gray-800 mb-2">General Inquiries</h4>
-                <p className="text-gray-700">scil.olympiad.info@gmail.com
-                                              0333-4865500
-                </p>
+                <p className="text-gray-700">scil.olympiad.info@gmail.com </p>
+                <p className="text-gray-700">+92 333 4865500 </p>
                 <p className="text-gray-600 text-sm mt-2">
                   For general questions about the event, registration process, or sponsorship opportunities.
                 </p>
