@@ -146,13 +146,6 @@ const StudyGuides = () => {
                   <br />└── writing-guide.pdf
                 </div>
               </div>
-              <div>
-                <h4 className="font-semibold mb-2">Update Process:</h4>
-                <ul className="space-y-2 text-blue-100">
-                  <li>• Replace old PDFs in <code>public/guides/</code> folder</li>
-                  <li>• Keep the same file names</li>
-                  <li>• Files update automatically on website</li>
-                  <li>• No code changes needed for PDF updates</li>
                 </ul>
               </div>
             </div>
