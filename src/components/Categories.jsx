@@ -181,22 +181,18 @@ const CategoryModal = ({ category, isOpen, onClose }) => {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
-            className="bg-white dark:bg-gray-800 rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transition-colors duration-300"
+            className="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="p-6">
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-800 dark:text-white transition-colors duration-300">
-                    {category.title}
-                  </h3>
-                  <p className="text-lg text-blue-600 dark:text-blue-400 font-semibold transition-colors duration-300">
-                    {category.subtitle}
-                  </p>
+                  <h3 className="text-2xl font-bold text-gray-800">{category.title}</h3>
+                  <p className="text-lg text-blue-600 font-semibold">{category.subtitle}</p>
                 </div>
                 <button
                   onClick={onClose}
-                  className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors duration-300"
+                  className="text-gray-500 hover:text-gray-700"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -215,12 +211,12 @@ const CategoryModal = ({ category, isOpen, onClose }) => {
                     if (fallback) fallback.style.display = 'flex';
                   }}
                 />
-                <div className="image-fallback bg-gray-200 dark:bg-gray-700 h-48 flex items-center justify-center hidden transition-colors duration-300">
-                  <span className="text-gray-500 dark:text-gray-400">Category Image</span>
+                <div className="image-fallback bg-gray-200 h-48 flex items-center justify-center hidden">
+                  <span className="text-gray-500">Category Image</span>
                 </div>
               </div>
               
-              <div className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed whitespace-pre-line transition-colors duration-300">
+              <div className="text-gray-600 mb-6 leading-relaxed whitespace-pre-line">
                 {category.details}
               </div>
               
@@ -236,7 +232,7 @@ const CategoryModal = ({ category, isOpen, onClose }) => {
                 </button>
                 <button
                   onClick={handleGoToRegistration}
-                  className="flex-1 border-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 py-3 px-4 rounded-lg font-medium hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-200"
+                  className="flex-1 border-2 border-blue-600 text-blue-600 py-3 px-4 rounded-lg font-medium hover:bg-blue-50 transition-colors duration-200"
                 >
                   Go to Registration
                 </button>
@@ -253,13 +249,13 @@ const Categories = () => {
   const [selectedCategory, setSelectedCategory] = useState(null)
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4 transition-colors duration-300">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Competition Categories
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-colors duration-300">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Explore 7 Islamic and academic categories to showcase your talents in SCIL Olympiad 2026
           </p>
         </div>
@@ -270,7 +266,7 @@ const Categories = () => {
               key={category.id}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-700/50 overflow-hidden cursor-pointer hover:shadow-xl dark:hover:shadow-gray-600/50 transition-all duration-300"
+              className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300"
               onClick={() => setSelectedCategory(category)}
             >
               <div className="h-48 overflow-hidden">
@@ -284,21 +280,21 @@ const Categories = () => {
                     if (fallback) fallback.style.display = 'flex';
                   }}
                 />
-                <div className="image-fallback bg-gray-200 dark:bg-gray-700 h-48 flex items-center justify-center hidden transition-colors duration-300">
-                  <span className="text-gray-500 dark:text-gray-400">Image not found</span>
+                <div className="image-fallback bg-gray-200 h-48 flex items-center justify-center hidden">
+                  <span className="text-gray-500">Image not found</span>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2 transition-colors duration-300">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   {category.title}
                 </h3>
-                <p className="text-blue-600 dark:text-blue-400 font-medium mb-2 transition-colors duration-300">
+                <p className="text-blue-600 font-medium mb-2">
                   {category.subtitle}
                 </p>
-                <p className="text-gray-600 dark:text-gray-300 mb-4 transition-colors duration-300">
+                <p className="text-gray-600 mb-4">
                   {category.description}
                 </p>
-                <button className="text-blue-600 dark:text-blue-400 font-medium hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 flex items-center gap-1">
+                <button className="text-blue-600 font-medium hover:text-blue-700 transition-colors duration-200 flex items-center gap-1">
                   Learn More 
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

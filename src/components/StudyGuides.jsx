@@ -72,13 +72,13 @@ const StudyGuides = () => {
   }
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4 transition-colors duration-300">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Study Guides & Resources
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-colors duration-300">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Download comprehensive study guides and preparation materials for all competition categories
           </p>
         </div>
@@ -87,7 +87,7 @@ const StudyGuides = () => {
           {studyGuidesData.map((guide) => (
             <div
               key={guide.id}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-700/50 overflow-hidden hover:shadow-xl dark:hover:shadow-gray-600/50 transition-all duration-300"
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
             >
               <div className="h-48 overflow-hidden">
                 <img 
@@ -100,18 +100,18 @@ const StudyGuides = () => {
                     if (fallback) fallback.style.display = 'flex';
                   }}
                 />
-                <div className="guide-fallback bg-gray-200 dark:bg-gray-700 h-48 flex items-center justify-center hidden transition-colors duration-300">
-                  <span className="text-gray-500 dark:text-gray-400">Guide Cover</span>
+                <div className="guide-fallback bg-gray-200 h-48 flex items-center justify-center hidden">
+                  <span className="text-gray-500">Guide Cover</span>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2 transition-colors duration-300">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   {guide.title}
                 </h3>
-                <p className="text-blue-600 dark:text-blue-400 font-medium mb-2 transition-colors duration-300">
+                <p className="text-blue-600 font-medium mb-2">
                   {guide.subtitle}
                 </p>
-                <p className="text-gray-600 dark:text-gray-300 mb-4 transition-colors duration-300">
+                <p className="text-gray-600 mb-4">
                   {guide.description}
                 </p>
                 <button
