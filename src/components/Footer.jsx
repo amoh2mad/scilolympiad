@@ -24,7 +24,7 @@ const Footer = () => {
 
           {/* Organization Info */}
           <p className="text-gray-300 text-lg mb-4">
-            Organized by SCIL
+            Organized by SCIL Defence Campus
           </p>
           <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
             Striving for excellence in Islamic and academic education through competitive events 
