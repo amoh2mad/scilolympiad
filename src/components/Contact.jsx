@@ -26,14 +26,16 @@ const Contact = () => {
               </div>
               
               <div className="bg-pink-50 rounded-lg p-6">
-                <h4 className="font-semibold text-pink-800 mb-2">Girls Coordinator</h4>
+                <h4 className="font-semibold text-pink-800 mb-2">Girls Management</h4>
                 <p className="text-pink-700 text-lg">+92 334 8078553, +92 335 1557196</p>
                 <p className="text-pink-600 text-sm">scil.olympiad.info@gmail.com</p>
               </div>
               
               <div className="bg-gray-50 rounded-lg p-6">
                 <h4 className="font-semibold text-gray-800 mb-2">General Inquiries</h4>
-                <p className="text-gray-700">scil.olympiad.info@gmail.com</p>
+                <p className="text-gray-700">scil.olympiad.info@gmail.com
+                                              0333-4865500
+                </p>
                 <p className="text-gray-600 text-sm mt-2">
                   For general questions about the event, registration process, or sponsorship opportunities.
                 </p>
@@ -114,8 +116,8 @@ const Contact = () => {
                   Prefer direct communication? Reach out to our coordinators via phone or email for immediate assistance.
                 </p>
                 <div className="space-y-2 text-sm text-gray-700">
-                  <p>📞 Call during office hours: 9 AM - 5 PM</p>
-                  <p>📧 Email responses within 24 hours</p>
+                  <p>Call during office hours: 9 AM - 5 PM</p>
+                  <p> Email responses within 24 hours</p>
                 </div>
               </div>
             </div>
