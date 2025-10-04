@@ -127,30 +127,6 @@ const StudyGuides = () => {
             </div>
           ))}
         </div>
-
-        {/* File Structure Instructions */}
-        <div className="max-w-4xl mx-auto mt-16">
-          <div className="bg-blue-600 dark:bg-blue-800 text-white rounded-xl p-8 transition-colors duration-300">
-            <h3 className="text-2xl font-bold mb-4">How to Update Study Guides</h3>
-            <div className="grid md:grid-cols-2 gap-6 text-left">
-              <div>
-                <h4 className="font-semibold mb-2">Required PDF Files:</h4>
-                <div className="bg-blue-700 dark:bg-blue-900 rounded-lg p-4 text-sm font-mono transition-colors duration-300">
-                  public/guides/
-                  <br />├── qiraat-guide.pdf
-                  <br />├── islamic-quiz-guide.pdf
-                  <br />├── mun-guide.pdf
-                  <br />├── debates-guide.pdf
-                  <br />├── poetry-recitation-guide.pdf
-                  <br />├── hamd-naat-guide.pdf
-                  <br />└── writing-guide.pdf
-                </div>
-              </div>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   )
