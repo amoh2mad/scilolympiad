@@ -119,7 +119,7 @@ const Hero = () => {
           <div className="flex flex-col md:flex-row items-center justify-between mb-12">
             <div className="flex items-center space-x-4 mb-6 md:mb-0">
               <img 
-                src="/images/scil-logo.png" 
+                src="/images/logo.png" 
                 alt="SCIL Olympiad"
                 className="h-20 object-contain"
                 onError={(e) => {
