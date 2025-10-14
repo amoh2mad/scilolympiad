@@ -14,12 +14,12 @@ const Footer = () => {
     <footer className="bg-gray-800 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="text-center">
-          {/* Logo */}
-          <div className="flex items-center justify-center space-x-2 mb-6">
+          {/* Logo - Updated */}
+          <div className="flex items-center justify-center space-x-3 mb-6">
             <img 
-              src="/images/logo.png" 
+              src="/images/scil-logo.png" 
               alt="SCIL Olympiad"
-              className="w-8 h-8 object-contain"
+              className="h-12 object-contain"
               onError={(e) => {
                 e.target.style.display = 'none';
                 const fallback = e.target.nextElementSibling;
@@ -27,10 +27,9 @@ const Footer = () => {
               }}
             />
             {/* Fallback */}
-            <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center hidden">
-              <span className="text-white font-bold text-sm">SC</span>
+            <div className="hidden">
+              <span className="text-xl font-bold">SCIL Olympiad 2026</span>
             </div>
-            <span className="text-xl font-bold">SCIL Olympiad 2026</span>
           </div>
 
           {/* Organization Info */}
