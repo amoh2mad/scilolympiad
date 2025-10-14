@@ -11,7 +11,7 @@ const categoriesData = [
     pdf: "/guides/qiraat-guide.pdf",
     details: `The Qiraat category will showcase the beauty of Quranic recitation, a sacred art in Islam. Delegates will recite verses from the Quran, capturing the rhythmic cadence and heartfelt spirituality of each line. This category emphasizes the profound connection between the art of recitation and the meanings of the Quranic verses, allowing listeners to experience the divine message through soulful expressions.
 
-**Guidelines:**
+Guidelines:
 - Each delegate will recite a passage of their own choice
 - Time limit: 2-3 minutes
 - Emphasis on precision, accuracy and rhythm in Quranic recitation
@@ -27,13 +27,13 @@ Truly, the skill of precision, accuracy and rhythm in Quranic recitation renders
     pdf: "/guides/hamd-naat-guide.pdf",
     details: `In the Hamd, Nasheed, and Naat category, participants are invited to express their devotion and creativity through melodious recitations that reflect faith, gratitude, and spiritual love. This segment celebrates the harmony of voice and emotion, where participants convey deep reverence and beauty through meaningful verses.
 
-**Guidelines:**
-- **Content:** Must reflect faith, gratitude, and devotion. No elements of shirk or content contradicting Islamic beliefs.
-- **Originality:** Should not be based on or adapted from existing songs or musical compositions.
-- **Duration:** Must not exceed 3 minutes.
-- **Presentation:** Clear pronunciation, expressive delivery, and respectful manner are essential.
+Guidelines:
+- Content: Must reflect faith, gratitude, and devotion. No elements of shirk or content contradicting Islamic beliefs.
+- Originality: Should not be based on or adapted from existing songs or musical compositions.
+- Duration: Must not exceed 3 minutes.
+- Presentation: Clear pronunciation, expressive delivery, and respectful manner are essential.
 
-**Note:** A list of acceptable and suggested Hamds, Naats, and poems will be uploaded in the Study Guides section. If a delegate wishes to present a different piece, it must first be approved by the SCIL Olympiad Team.`
+Note: A list of acceptable and suggested Hamds, Naats, and poems will be uploaded in the Study Guides section. If a delegate wishes to present a different piece, it must first be approved by the SCIL Olympiad Team.`
   },
   {
     id: 3,
@@ -44,11 +44,11 @@ Truly, the skill of precision, accuracy and rhythm in Quranic recitation renders
     pdf: "/guides/islamic-quiz-guide.pdf",
     details: `The Islamic Quiz category is designed to encourage learning and enthusiasm for Islamic heritage through engaging questions and challenges. It will test participants' knowledge of Makki/Madni life of our beloved Prophet (SAW) and his noble companions.
 
-**Syllabus:**
+Syllabus:
 - Seerah - The Radiant Lamp, published by SCIL Hikmah Cell
 - General Islamic knowledge according to school syllabus
 
-**Guidelines:**
+Guidelines:
 - Each team should consist of 2-3 members
 - Relevant excerpts from The Radiant Lamp will be uploaded as PDF (Makkan Period & Madni Period till Battle of Badr)
 - Results and awards compiled separately for each age category
@@ -65,13 +65,13 @@ This interactive segment is an exciting opportunity for participants to deepen t
     pdf: "/guides/writing-guide.pdf",
     details: `In the content writing category, delegates are invited to compose thoughtful articles and essays on topics related to our culture, values and collective vision - in both English and Urdu. Writers will explore subjects such as the current World conflicts and future of its youth.
 
-**Guidelines:**
-- **Languages:** English and Urdu
-- **Age Categories:** Grades 6-8, Under 17 (O levels/Matriculation), and Open (A levels/Intermediate and Above)
-- **Duration:** 50 minutes
-- **Format:** Extempore writing on topic given at start of event
-- **Style:** Narrative style required
-- **Participation:** Each delegate can choose only one language and one category (Serious or Humorous)`
+Guidelines:
+- Languages: English and Urdu
+- Age Categories: Grades 6-8, Under 17 (O levels/Matriculation), and Open (A levels/Intermediate and Above)
+- Duration: 50 minutes
+- Format: Extempore writing on topic given at start of event
+- Style: Narrative style required
+- Participation: Each delegate can choose only one language and one category (Serious or Humorous)`
   },
   {
     id: 5,
@@ -82,18 +82,18 @@ This interactive segment is an exciting opportunity for participants to deepen t
     pdf: "/guides/debates-guide.pdf",
     details: `Parliamentary debate is a formal discussion between two sides: Proposition (supports the motion) and Opposition (argues against it). This category is exclusively for Girls participants.
 
-**Debate Structure:**
+Debate Structure:
 - Main speeches: 8 minutes
 - Reply speeches: 4 minutes
 - Combination of prepared and impromptu debates
 
-**Competition Schedule:**
-- **Day 1 & 2:** 4 rounds total
+Competition Schedule:
+- Day 1 & 2: 4 rounds total
   - Round 1: Prepared debate (teams research in advance)
   - Rounds 2-4: Impromptu debates (motions given shortly before)
-- **Day 3:** Semi-finals and Grand finals
+- Day 3: Semi-finals and Grand finals
 
-**Judging Criteria:** Content, style, and strategy. Top teams qualify for octo-finals leading to championship.`
+Judging Criteria: Content, style, and strategy. Top teams qualify for octo-finals leading to championship.`
   },
   {
     id: 6,
@@ -104,13 +104,13 @@ This interactive segment is an exciting opportunity for participants to deepen t
     pdf: "/guides/poetry-recitation-guide.pdf",
     details: `The poetry recitation category will celebrate the rich tradition of poetry in Islam, blending spirituality with eloquence. Delegates will recite verses from renowned poets as well as original works, celebrating themes of faith, devotion, and reflection.
 
-**Guidelines:**
-- **Languages:** English and Urdu
-- **Categories:** Separate categories for Serious and Humorous poetry
-- **Duration:** 2-3 minutes per recitation
-- **Format:** One round competition
-- **Selection:** Poems will be uploaded in Study Guides section
-- **Participation:** Each delegate can choose only one language and one category
+Guidelines:
+- Languages: English and Urdu
+- Categories: Separate categories for Serious and Humorous poetry
+- Duration: 2-3 minutes per recitation
+- Format: One round competition
+- Selection: Poems will be uploaded in Study Guides section
+- Participation: Each delegate can choose only one language and one category
 
 Results and awards will be compiled separately for each age category.`
   },
@@ -123,13 +123,13 @@ Results and awards will be compiled separately for each age category.`
     pdf: "/guides/art-gallery-guide.pdf",
     details: `This themed exhibition highlights the elegance and depth of Islamic teachings and culture through the expressive arts of calligraphy and still life painting.
 
-**Guidelines:**
-- **Technique:** Calligraphy OR Still Life
-- **Medium:** Acrylic painting & Sketching (Still Life)
-- **Canvas Size:** 16" x 20"
-- **Schedule:** Setup at 9:30 AM, painting 10:00 AM - 3:00 PM
+Guidelines:
+- Technique: Calligraphy OR Still Life
+- Medium: Acrylic painting & Sketching (Still Life)
+- Canvas Size: 16" x 20"
+- Schedule: Setup at 9:30 AM, painting 10:00 AM - 3:00 PM
 
-**Requirements:**
+Requirements:
 - Delegates must bring their own easels, palettes, acrylic paints, and canvas/card paper
 - For calligraphy: delegates may bring images of calligraphy they want to paint
 - For still life: objects will be provided by SCIL
@@ -144,37 +144,15 @@ The exhibition showcases timeless beauty of traditional calligraphy and reflecti
     description: "Engage in diplomatic discussions and represent countries in UN-style debates.",
     image: "/images/categories/mun.jpg",
     pdf: "/guides/mun-guide.pdf",
-    details: `*Details for Model United Nations will be announced soon.*
+    details: `Details for Model United Nations will be announced soon.
 
-**Category Exclusively for Boys Participants**
+Category Exclusively for Boys Participants
 
 Model United Nations challenges participants to engage in diplomatic discussions, develop public speaking skills, and understand global issues from multiple perspectives through UN-style committee sessions.
 
 Please check back later for complete guidelines and competition details.`
   }
 ]
-
-const AgeCategoriesInfo = () => (
-  <div className="bg-blue-50 rounded-lg p-6 mt-8">
-    <h4 className="text-lg font-semibold text-blue-800 mb-4 text-center">
-      Age Categories
-    </h4>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-      <div className="bg-white rounded-lg p-4 shadow-sm">
-        <h5 className="font-semibold text-blue-700 mb-2">Category 1</h5>
-        <p className="text-blue-600">Grades 6 - 8</p>
-      </div>
-      <div className="bg-white rounded-lg p-4 shadow-sm">
-        <h5 className="font-semibold text-blue-700 mb-2">Category 2</h5>
-        <p className="text-blue-600">O-Level (and equivalent)</p>
-      </div>
-      <div className="bg-white rounded-lg p-4 shadow-sm">
-        <h5 className="font-semibold text-blue-700 mb-2">Category 3</h5>
-        <p className="text-blue-600">A-Level (and equivalent)</p>
-      </div>
-    </div>
-  </div>
-)
 
 const CategoryModal = ({ category, isOpen, onClose }) => {
   const handleDownloadGuide = () => {
@@ -337,8 +315,6 @@ const Categories = () => {
             </motion.div>
           ))}
         </div>
-
-        <AgeCategoriesInfo />
 
       </div>
 
