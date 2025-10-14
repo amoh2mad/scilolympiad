@@ -16,7 +16,18 @@ const Footer = () => {
         <div className="text-center">
           {/* Logo */}
           <div className="flex items-center justify-center space-x-2 mb-6">
-            <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+            <img 
+              src="/images/logo.png" 
+              alt="SCIL Olympiad"
+              className="w-8 h-8 object-contain"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                const fallback = e.target.nextElementSibling;
+                if (fallback) fallback.style.display = 'flex';
+              }}
+            />
+            {/* Fallback */}
+            <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center hidden">
               <span className="text-white font-bold text-sm">SC</span>
             </div>
             <span className="text-xl font-bold">SCIL Olympiad 2026</span>
@@ -36,10 +47,6 @@ const Footer = () => {
             <div>
               <p className="text-gray-300">Email</p>
               <p className="text-gray-400">scil.olympiad.info@gmail.com</p>
-            </div>
-            <div>
-              <p className="text-gray-300">Website</p>
-              <p className="text-gray-400">scilolympiad.com</p>
             </div>
             <div>
               <p className="text-gray-300">Venue</p>
@@ -112,7 +119,7 @@ const Footer = () => {
           <div className="border-t border-gray-700 pt-6">
             <p className="text-gray-400">
               © {currentYear} SCIL Olympiad. All rights reserved.
-              Designed by Abdullah M. </p>
+            </p>
           </div>
         </div>
       </div>

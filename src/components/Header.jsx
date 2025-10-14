@@ -17,11 +17,25 @@ const Header = ({ activeSection }) => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">SC</span>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/images/logo.png" 
+              alt="SCIL Olympiad"
+              className="w-10 h-10 object-contain"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                // Fallback to text logo if image fails
+                const fallback = e.target.nextElementSibling;
+                if (fallback) fallback.style.display = 'flex';
+              }}
+            />
+            {/* Fallback text logo */}
+            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hidden">
+              <span className="text-white font-bold text-sm">SC</span>
             </div>
-            <span className="text-xl font-bold text-gray-800">SCIL Olympiad 2026</span>
+            <span className="text-xl font-bold text-gray-800">
+              SCIL Olympiad 2026
+            </span>
           </div>
 
           {/* Navigation - Desktop */}
