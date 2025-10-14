@@ -93,8 +93,25 @@ const Hero = () => {
   }
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-600 to-purple-700 text-white py-20">
-      <div className="absolute inset-0 bg-black/20"></div>
+    <section className="relative text-white py-20">
+      {/* Background Image with Transparent Overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src="/images/hero-bg.jpg" 
+          alt="SCIL Olympiad 2026"
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            e.target.style.display = 'none';
+            const fallback = e.target.nextElementSibling;
+            if (fallback) fallback.style.display = 'block';
+          }}
+        />
+        {/* Fallback gradient if image fails to load */}
+        <div className="hidden absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-700"></div>
+        {/* Transparent overlay */}
+        <div className="absolute inset-0 bg-black/30"></div>
+      </div>
+      
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
@@ -127,23 +144,6 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Event Dates Summary */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-12 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-semibold mb-4">Event Schedule</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-              <div className="bg-pink-500/20 rounded-lg p-4">
-                <h4 className="font-semibold text-pink-200 mb-2">Girls Olympiad</h4>
-                <p className="text-white">January 23-25, 2026</p>
-                <p className="text-pink-100 text-sm">Friday - Sunday</p>
-              </div>
-              <div className="bg-blue-500/20 rounded-lg p-4">
-                <h4 className="font-semibold text-blue-200 mb-2">Boys Olympiad</h4>
-                <p className="text-white">January 30 - February 1, 2026</p>
-                <p className="text-blue-100 text-sm">Friday - Sunday</p>
-              </div>
-            </div>
-          </div>
-
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
@@ -162,7 +162,7 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Hero Image Placeholder */}
+      {/* Bottom Gradient Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
     </section>
   )
