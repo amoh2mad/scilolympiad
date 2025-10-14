@@ -93,31 +93,15 @@ const Hero = () => {
   }
 
   return (
-    <section className="relative text-white py-20 min-h-screen flex items-center">
-      {/* Background Image with Blue Overlay */}
-      <div className="absolute inset-0">
-        <img 
-          src="/images/hero-bg.jpg" 
-          alt="SCIL Olympiad 2026"
-          className="w-full h-full object-cover"
-          onError={(e) => {
-            e.target.style.display = 'none';
-            const fallback = e.target.nextElementSibling;
-            if (fallback) fallback.style.display = 'block';
-          }}
-        />
-        {/* Fallback gradient if image fails to load */}
-        <div className="hidden absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-700"></div>
-        {/* Semi-transparent blue overlay */}
-        <div className="absolute inset-0 bg-blue-900/60"></div>
-      </div>
+    <section className="relative text-white py-20">
+      {/* Blue Band Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800"></div>
       
-      {/* Content Container */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
-          {/* Logo and Title Section */}
-          <div className="flex flex-col md:flex-row items-center justify-between mb-12">
-            <div className="flex items-center space-x-4 mb-6 md:mb-0">
+          {/* Centered Logo and Title */}
+          <div className="flex flex-col items-center justify-center text-center mb-12">
+            <div className="flex items-center justify-center space-x-4 mb-6">
               <img 
                 src="/images/logo.png" 
                 alt="SCIL Olympiad"
@@ -126,25 +110,19 @@ const Hero = () => {
                   e.target.style.display = 'none';
                 }}
               />
-              <div>
-                <h1 className="text-4xl md:text-6xl font-bold mb-2">
-                  SCIL Olympiad 2026
-                </h1>
-                <p className="text-xl text-blue-100">
-                  Celebrating Excellence in Islamic Education
-                </p>
-              </div>
             </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              SCIL Olympiad 2026
+            </h1>
+            <p className="text-lg mb-8 text-blue-100 max-w-2xl">
+              Join us for an enriching 3-day event celebrating Islamic knowledge, creativity, and spiritual growth
+            </p>
           </div>
-
-          <p className="text-lg mb-12 text-blue-100 max-w-2xl text-center md:text-left">
-            Join us for an enriching 3-day event celebrating Islamic knowledge, creativity, and spiritual growth
-          </p>
           
           {/* Side by Side Countdown Timers */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             {/* Girls Event Timer */}
-            <div className="bg-gradient-to-br from-pink-500/90 to-purple-600/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/20">
+            <div className="bg-gradient-to-br from-pink-500 to-purple-600 rounded-2xl p-6 shadow-xl">
               <h3 className="text-2xl font-bold mb-4 text-white">Girls Event Starts In</h3>
               <p className="text-pink-100 mb-4">January 23-25, 2026</p>
               <GirlsCountdownTimer />
@@ -154,7 +132,7 @@ const Hero = () => {
             </div>
 
             {/* Boys Event Timer */}
-            <div className="bg-gradient-to-br from-blue-500/90 to-cyan-600/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/20">
+            <div className="bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl p-6 shadow-xl">
               <h3 className="text-2xl font-bold mb-4 text-white">Boys Event Starts In</h3>
               <p className="text-blue-100 mb-4">January 30 - February 1, 2026</p>
               <BoysCountdownTimer />
@@ -165,25 +143,22 @@ const Hero = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={scrollToRegistration}
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 shadow-lg"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200"
             >
               Register Now
             </button>
             <button
               onClick={() => document.getElementById('study-guides').scrollIntoView({ behavior: 'smooth' })}
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200 backdrop-blur-sm"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200"
             >
               Download Guides
             </button>
           </div>
         </div>
       </div>
-      
-      {/* Bottom Gradient Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
     </section>
   )
 }
