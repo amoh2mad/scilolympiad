@@ -100,6 +100,26 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
+          {/* Logo */}
+          <div className="flex justify-center mb-6">
+            <div className="relative">
+              <img 
+                src="/images/logo.png" 
+                alt="SCIL Olympiad Logo"
+                className="w-24 h-24 md:w-32 md:h-32 object-contain drop-shadow-lg"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  const fallback = e.target.nextElementSibling;
+                  if (fallback) fallback.style.display = 'flex';
+                }}
+              />
+              {/* Fallback logo */}
+              <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-full flex items-center justify-center hidden drop-shadow-lg">
+                <span className="text-blue-600 font-bold text-lg md:text-xl">SCIL</span>
+              </div>
+            </div>
+          </div>
+
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
             SCIL Olympiad 2026
           </h1>
