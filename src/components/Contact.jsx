@@ -22,7 +22,7 @@ const Contact = () => {
               <div className="bg-blue-50 rounded-lg p-6">
                 <h4 className="font-semibold text-blue-800 mb-2">Boys Management</h4>
                 <p className="text-blue-700 text-lg">+92 330 4204892, +92 300 4475506</p>
-                <p className="text-blue-600 text-sm">scil.olympiad.info@gmail.com</p>
+                <p className="text-blue-600 text-sm">scil.event.info@gmail.com</p>
               </div>
               
               <div className="bg-pink-50 rounded-lg p-6">
@@ -33,17 +33,11 @@ const Contact = () => {
               
               <div className="bg-gray-50 rounded-lg p-6">
                 <h4 className="font-semibold text-gray-800 mb-2">General Inquiries</h4>
-                <p className="text-gray-700">scil.olympiad.info@gmail.com </p>
-                <p className="text-gray-700">+92 333 4865500 </p>
+                <p className="text-gray-700">scil.olympiad.info@gmail.com</p>
+                <p className="text-gray-700">+92 333 4865500</p>
                 <p className="text-gray-600 text-sm mt-2">
                   For general questions about the event, registration process, or sponsorship opportunities.
                 </p>
-              </div>
-
-              <div className="bg-green-50 rounded-lg p-6">
-                <h4 className="font-semibold text-green-800 mb-2">Website</h4>
-                <p className="text-green-700 text-lg">scilolympiad.com</p>
-                <p className="text-green-600 text-sm">Visit our website for more information</p>
               </div>
             </div>
 
@@ -107,17 +101,6 @@ const Contact = () => {
                     <p className="text-blue-100 text-sm">Follow for boys event updates</p>
                   </div>
                 </a>
-              </div>
-
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h4 className="font-semibold text-gray-800 mb-4">Quick Contact</h4>
-                <p className="text-gray-600 mb-4">
-                  Prefer direct communication? Reach out to our coordinators via phone or email for immediate assistance.
-                </p>
-                <div className="space-y-2 text-sm text-gray-700">
-                  <p>Call during office hours: 9 AM - 5 PM</p>
-                  <p> Email responses within 24 hours</p>
-                </div>
               </div>
             </div>
           </div>
