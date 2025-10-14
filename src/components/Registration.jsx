@@ -3,8 +3,9 @@ import React, { useState } from 'react'
 const Registration = () => {
   const [activeForm, setActiveForm] = useState('boys')
 
-  const boysFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdQMX2O4u_13OCOsZi8lg00N7rJh2frFOalMS-K2PJqGU1oqA/viewform?embedded=true"
-  const girlsFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdQMX2O4u_13OCOsZi8lg00N7rJh2frFOalMS-K2PJqGU1oqA/viewform?embedded=true"
+  // Updated embed URLs
+  const boysFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSeATJFYkKKM5_FS_ATF03dQ8PoejfE2epi7DTnauqfLIq6hAA/viewform?embedded=true"
+  const girlsFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSc6QPn-CydGTtRFNxsRjpFR7TDa2BXQ4NouwDbp0G_DKDTqpw/viewform?embedded=true"
 
   return (
     <section className="py-20 bg-white">
@@ -23,12 +24,12 @@ const Registration = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-center">
               <h3 className="text-2xl font-bold text-green-800 mb-2">Early Bird Registration</h3>
-              <p className="text-3xl font-bold text-green-600 mb-2">Rs. 2,000</p>
+              <p className="text-3xl font-bold text-green-600 mb-2">Rs. 2,500</p>
               <p className="text-green-700">Until December 31, 2025</p>
             </div>
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 text-center">
               <h3 className="text-2xl font-bold text-blue-800 mb-2">Regular Registration</h3>
-              <p className="text-3xl font-bold text-blue-600 mb-2">Rs. 2,500</p>
+              <p className="text-3xl font-bold text-blue-600 mb-2">Rs. 3,000</p>
               <p className="text-blue-700">Until January 20, 2026</p>
             </div>
           </div>
@@ -72,7 +73,7 @@ const Registration = () => {
                 <iframe 
                   src={boysFormUrl}
                   width="100%" 
-                  height="548" 
+                  height="800" 
                   frameBorder="0" 
                   marginHeight="0" 
                   marginWidth="0"
@@ -94,7 +95,7 @@ const Registration = () => {
                 <iframe 
                   src={girlsFormUrl}
                   width="100%" 
-                  height="548" 
+                  height="800" 
                   frameBorder="0" 
                   marginHeight="0" 
                   marginWidth="0"
@@ -114,10 +115,13 @@ const Registration = () => {
               Important Registration Information
             </h4>
             <ul className="text-blue-700 space-y-2">
-              <li>• Early Bird Registration: Rs. 2,000 (Until December 31, 2025)</li>
-              <li>• Regular Registration: Rs. 2,500 (Until January 20, 2026)</li>
+              <li>• Early Bird Registration: Rs. 2,500 (Until December 31, 2025)</li>
+              <li>• Regular Registration: Rs. 3,000 (Until January 20, 2026)</li>
+              <li>• Each team must participate in at least 2 categories per session</li>
+              <li>• Check the schedule before choosing categories to avoid overlaps</li>
               <li>• Payment should be made only to the Meezan Bank account provided in the form</li>
               <li>• The organization is not responsible for incorrect payments</li>
+              <li>• Once registered, the delegate's fee is non refundable.</li>
             </ul>
           </div>
         </div>
