@@ -8,6 +8,7 @@ const categoriesData = [
     subtitle: "Qiraat | حالوة القرآن",
     description: "Showcase the beauty of Quranic recitation with precision, accuracy and rhythm.",
     image: "/images/categories/qiraat.png",
+    fallbackColor: "from-blue-500 to-blue-600",
     pdf: "/guides/qiraat-guide.pdf",
     details: `The Qiraat category will showcase the beauty of Quranic recitation, a sacred art in Islam. Delegates will recite verses from the Quran, capturing the rhythmic cadence and heartfelt spirituality of each line. This category emphasizes the profound connection between the art of recitation and the meanings of the Quranic verses, allowing listeners to experience the divine message through soulful expressions.
 
@@ -24,6 +25,7 @@ Truly, the skill of precision, accuracy and rhythm in Quranic recitation renders
     subtitle: "Hamd/Nasheed/Naat | خيوط البالغة",
     description: "Express devotion through beautiful Islamic songs and spiritual praises.",
     image: "/images/categories/naat.png",
+    fallbackColor: "from-purple-500 to-pink-500",
     pdf: "/guides/hamd-naat-guide.pdf",
     details: `In the Hamd, Nasheed, and Naat category, participants are invited to express their devotion and creativity through melodious recitations that reflect faith, gratitude, and spiritual love. This segment celebrates the harmony of voice and emotion, where participants convey deep reverence and beauty through meaningful verses.
 
@@ -41,6 +43,7 @@ Note: A list of acceptable and suggested Hamds, Naats, and poems will be uploade
     subtitle: "Islamic Quiz | سفِربصيرت",
     description: "Test your knowledge of Islamic heritage, history, and developments.",
     image: "/images/categories/quiz.png",
+    fallbackColor: "from-green-500 to-teal-500",
     pdf: "/guides/islamic-quiz-guide.pdf",
     details: `The Islamic Quiz category is designed to encourage learning and enthusiasm for Islamic heritage through engaging questions and challenges. It will test participants' knowledge of Makki/Madni life of our beloved Prophet (SAW) and his noble companions.
 
@@ -62,6 +65,7 @@ This interactive segment is an exciting opportunity for participants to deepen t
     subtitle: "Writing | زوِرقلم",
     description: "Compose thoughtful articles and essays on Islamic culture, values and vision.",
     image: "/images/categories/writing.png",
+    fallbackColor: "from-yellow-500 to-orange-500",
     pdf: "/guides/writing-guide.pdf",
     details: `In the content writing category, delegates are invited to compose thoughtful articles and essays on topics related to our culture, values and collective vision - in both English and Urdu. Writers will explore subjects such as the current World conflicts and future of its youth.
 
@@ -75,10 +79,11 @@ Guidelines:
   },
   {
     id: 5,
-    title: "Echoes of Enlightenment (Girls Only)",
-    subtitle: "Parliamentary Debates | صدائےعرفان",
+    title: "Echoes of Enlightenment",
+    subtitle: "Parliamentary Debates (Girls Only) | صدائےعرفان",
     description: "Participate in British Parliamentary style debates on contemporary issues.",
     image: "/images/categories/parlimentary.png",
+    fallbackColor: "from-red-500 to-pink-500",
     pdf: "/guides/debates-guide.pdf",
     details: `Parliamentary debate is a formal discussion between two sides: Proposition (supports the motion) and Opposition (argues against it). This category is exclusively for Girls participants.
 
@@ -101,6 +106,7 @@ Judging Criteria: Content, style, and strategy. Top teams qualify for octo-final
     subtitle: "Poetry Recitation | نغمۂگل",
     description: "Celebrate the rich tradition of poetry in Islam, blending spirituality with eloquence.",
     image: "/images/categories/poetry.png",
+    fallbackColor: "from-indigo-500 to-purple-500",
     pdf: "/guides/poetry-recitation-guide.pdf",
     details: `The poetry recitation category will celebrate the rich tradition of poetry in Islam, blending spirituality with eloquence. Delegates will recite verses from renowned poets as well as original works, celebrating themes of faith, devotion, and reflection.
 
@@ -117,9 +123,10 @@ Results and awards will be compiled separately for each age category.`
   {
     id: 7,
     title: "Sacred Strokes",
-    subtitle: "Art Gallery | قوِس قزح",
+    subtitle: "Art Gallery | قوس قزح",
     description: "Express Islamic teachings through calligraphy and still life painting.",
     image: "/images/categories/art.png",
+    fallbackColor: "from-cyan-500 to-blue-500",
     pdf: "/guides/art-gallery-guide.pdf",
     details: `This themed exhibition highlights the elegance and depth of Islamic teachings and culture through the expressive arts of calligraphy and still life painting.
 
@@ -142,7 +149,8 @@ The exhibition showcases timeless beauty of traditional calligraphy and reflecti
     title: "Model United Nations",
     subtitle: "MUN (Boys Only)",
     description: "Engage in diplomatic discussions and represent countries in UN-style debates.",
-    image: "/images/categories/mun.png",
+    image: "/images/categories/mun.jpg",
+    fallbackColor: "from-gray-500 to-blue-400",
     pdf: "/guides/mun-guide.pdf",
     details: `Details for Model United Nations will be announced soon.
 
@@ -154,7 +162,81 @@ Please check back later for complete guidelines and competition details.`
   }
 ]
 
+const CategoryCard = ({ category, onClick }) => {
+  const [imageLoaded, setImageLoaded] = useState(false)
+  const [imageError, setImageError] = useState(false)
+
+  const handleImageLoad = () => {
+    setImageLoaded(true)
+  }
+
+  const handleImageError = () => {
+    setImageError(true)
+    setImageLoaded(true)
+  }
+
+  return (
+    <motion.div
+      whileHover={{ scale: 1.02, y: -5 }}
+      whileTap={{ scale: 0.98 }}
+      className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300 group"
+      onClick={onClick}
+    >
+      {/* Image Container with Fixed Aspect Ratio */}
+      <div className="relative h-48 bg-gray-100 overflow-hidden">
+        {/* Background Gradient Fallback */}
+        <div className={`absolute inset-0 bg-gradient-to-br ${category.fallbackColor} transition-opacity duration-300 ${
+          imageLoaded && !imageError ? 'opacity-0' : 'opacity-100'
+        }`}></div>
+        
+        {/* Actual Image */}
+        <img 
+          src={category.image} 
+          alt={category.title}
+          className={`absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:scale-110 ${
+            imageLoaded && !imageError ? 'opacity-100' : 'opacity-0'
+          }`}
+          onLoad={handleImageLoad}
+          onError={handleImageError}
+          loading="lazy"
+        />
+        
+        {/* Overlay with Category Info */}
+        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300 flex items-end">
+          <div className="p-4 w-full text-white">
+            <h3 className="font-semibold text-lg mb-1 drop-shadow-md">{category.title}</h3>
+            <p className="text-blue-200 text-sm font-medium drop-shadow-md">{category.subtitle}</p>
+          </div>
+        </div>
+        
+        {/* Loading Skeleton */}
+        {!imageLoaded && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+          </div>
+        )}
+      </div>
+
+      {/* Content Below Image */}
+      <div className="p-4">
+        <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+          {category.description}
+        </p>
+        <button className="text-blue-600 text-sm font-medium hover:text-blue-700 transition-colors duration-200 flex items-center gap-1 group-hover:gap-2">
+          Learn More 
+          <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </motion.div>
+  )
+}
+
 const CategoryModal = ({ category, isOpen, onClose }) => {
+  const [modalImageLoaded, setModalImageLoaded] = useState(false)
+  const [modalImageError, setModalImageError] = useState(false)
+
   const handleDownloadGuide = () => {
     if (category.pdf) {
       const link = document.createElement('a')
@@ -203,7 +285,7 @@ const CategoryModal = ({ category, isOpen, onClose }) => {
                 </div>
                 <button
                   onClick={onClose}
-                  className="text-gray-500 hover:text-gray-700"
+                  className="text-gray-500 hover:text-gray-700 transition-colors duration-200"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -211,20 +293,27 @@ const CategoryModal = ({ category, isOpen, onClose }) => {
                 </button>
               </div>
               
-              <div className="h-48 rounded-lg mb-4 overflow-hidden">
+              {/* Modal Image with Better Handling */}
+              <div className="relative h-64 rounded-lg mb-4 overflow-hidden bg-gray-100">
+                <div className={`absolute inset-0 bg-gradient-to-br ${category.fallbackColor} transition-opacity duration-300 ${
+                  modalImageLoaded && !modalImageError ? 'opacity-0' : 'opacity-100'
+                }`}></div>
+                
                 <img 
                   src={category.image} 
                   alt={category.title}
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    const fallback = e.target.parentElement.querySelector('.image-fallback');
-                    if (fallback) fallback.style.display = 'flex';
-                  }}
+                  className={`w-full h-full object-cover transition-opacity duration-300 ${
+                    modalImageLoaded && !modalImageError ? 'opacity-100' : 'opacity-0'
+                  }`}
+                  onLoad={() => setModalImageLoaded(true)}
+                  onError={() => setModalImageError(true)}
                 />
-                <div className="image-fallback bg-gray-200 h-48 flex items-center justify-center hidden">
-                  <span className="text-gray-500">Category Image</span>
-                </div>
+                
+                {!modalImageLoaded && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-8 h-8 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                )}
               </div>
               
               <div className="text-gray-600 mb-6 leading-relaxed whitespace-pre-line">
@@ -273,46 +362,11 @@ const Categories = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {categoriesData.map((category) => (
-            <motion.div
+            <CategoryCard
               key={category.id}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300"
+              category={category}
               onClick={() => setSelectedCategory(category)}
-            >
-              <div className="h-40 overflow-hidden">
-                <img 
-                  src={category.image} 
-                  alt={category.title}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    const fallback = e.target.parentElement.querySelector('.image-fallback');
-                    if (fallback) fallback.style.display = 'flex';
-                  }}
-                />
-                <div className="image-fallback bg-gradient-to-br from-blue-500 to-purple-600 h-40 flex items-center justify-center hidden">
-                  <span className="text-white font-semibold text-center px-2">{category.title}</span>
-                </div>
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2 line-clamp-2">
-                  {category.title}
-                </h3>
-                <p className="text-blue-600 font-medium text-sm mb-2">
-                  {category.subtitle}
-                </p>
-                <p className="text-gray-600 text-sm mb-3 line-clamp-2">
-                  {category.description}
-                </p>
-                <button className="text-blue-600 text-sm font-medium hover:text-blue-700 transition-colors duration-200 flex items-center gap-1">
-                  Learn More 
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
-            </motion.div>
+            />
           ))}
         </div>
 
