@@ -75,7 +75,7 @@ Guidelines:
   },
   {
     id: 5,
-    title: "Echoes of Enlightenment",
+    title: "Echoes of Enlightenment (Girls Only)",
     subtitle: "Parliamentary Debates | صدائےعرفان",
     description: "Participate in British Parliamentary style debates on contemporary issues.",
     image: "/images/categories/debates.jpg",
