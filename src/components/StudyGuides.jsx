@@ -45,7 +45,7 @@ const studyGuidesData = [
   {
     id: 5,
     title: "Echoes of Enlightenment",
-    subtitle: "Parliamentary Debates | صدائےعرفان",
+    subtitle: "Parliamentary Debates (Girls Only) | صدائےعرفان",
     description: "Rules and format for parliamentary debates",
     pdf: "/guides/debates-guide.pdf",
     category: "Debates",
