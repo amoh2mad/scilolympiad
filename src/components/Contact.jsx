@@ -20,14 +20,14 @@ const Contact = () => {
             
             <div className="space-y-6">
               <div className="bg-blue-50 rounded-lg p-6">
-                <h4 className="font-semibold text-blue-800 mb-2">Boys Management</h4>
-                <p className="text-blue-700 text-lg">+92 330 4204892, +92 300 4475506</p>
+                <h4 className="font-semibold text-blue-800 mb-2">Event Head</h4>
+                <p className="text-blue-700 text-lg">+92 330 4204892</p>
                 <p className="text-blue-600 text-sm">scil.event.info@gmail.com</p>
               </div>
               
               <div className="bg-pink-50 rounded-lg p-6">
-                <h4 className="font-semibold text-pink-800 mb-2">Girls Management</h4>
-                <p className="text-pink-700 text-lg">+92 334 8078553, +92 335 1557196</p>
+                <h4 className="font-semibold text-pink-800 mb-2">Event Head</h4>
+                <p className="text-pink-700 text-lg">+92 302 2643867</p>
                 <p className="text-pink-600 text-sm">scil.olympiad.info@gmail.com</p>
               </div>
               
