@@ -7,7 +7,7 @@ const categoriesData = [
     title: "The Sweetness of Quran",
     subtitle: "Qiraat | حالوة القرآن",
     description: "Showcase the beauty of Quranic recitation with precision, accuracy and rhythm.",
-    image: "/images/categories/qiraat.jpg",
+    image: "/images/categories/qiraat.png",
     pdf: "/guides/qiraat-guide.pdf",
     details: `The Qiraat category will showcase the beauty of Quranic recitation, a sacred art in Islam. Delegates will recite verses from the Quran, capturing the rhythmic cadence and heartfelt spirituality of each line. This category emphasizes the profound connection between the art of recitation and the meanings of the Quranic verses, allowing listeners to experience the divine message through soulful expressions.
 
@@ -23,7 +23,7 @@ Truly, the skill of precision, accuracy and rhythm in Quranic recitation renders
     title: "Soulful Voices",
     subtitle: "Hamd/Nasheed/Naat | خيوط البالغة",
     description: "Express devotion through beautiful Islamic songs and spiritual praises.",
-    image: "/images/categories/hamd-naat.jpg",
+    image: "/images/categories/naat.png",
     pdf: "/guides/hamd-naat-guide.pdf",
     details: `In the Hamd, Nasheed, and Naat category, participants are invited to express their devotion and creativity through melodious recitations that reflect faith, gratitude, and spiritual love. This segment celebrates the harmony of voice and emotion, where participants convey deep reverence and beauty through meaningful verses.
 
@@ -40,7 +40,7 @@ Note: A list of acceptable and suggested Hamds, Naats, and poems will be uploade
     title: "Walk of Wisdom",
     subtitle: "Islamic Quiz | سفِربصيرت",
     description: "Test your knowledge of Islamic heritage, history, and developments.",
-    image: "/images/categories/islamic-quiz.jpg",
+    image: "/images/categories/quiz.png",
     pdf: "/guides/islamic-quiz-guide.pdf",
     details: `The Islamic Quiz category is designed to encourage learning and enthusiasm for Islamic heritage through engaging questions and challenges. It will test participants' knowledge of Makki/Madni life of our beloved Prophet (SAW) and his noble companions.
 
@@ -61,7 +61,7 @@ This interactive segment is an exciting opportunity for participants to deepen t
     title: "Radiant Realms",
     subtitle: "Writing | زوِرقلم",
     description: "Compose thoughtful articles and essays on Islamic culture, values and vision.",
-    image: "/images/categories/writing.jpg",
+    image: "/images/categories/writing.png",
     pdf: "/guides/writing-guide.pdf",
     details: `In the content writing category, delegates are invited to compose thoughtful articles and essays on topics related to our culture, values and collective vision - in both English and Urdu. Writers will explore subjects such as the current World conflicts and future of its youth.
 
@@ -78,7 +78,7 @@ Guidelines:
     title: "Echoes of Enlightenment (Girls Only)",
     subtitle: "Parliamentary Debates | صدائےعرفان",
     description: "Participate in British Parliamentary style debates on contemporary issues.",
-    image: "/images/categories/debates.jpg",
+    image: "/images/categories/parlimentary.png",
     pdf: "/guides/debates-guide.pdf",
     details: `Parliamentary debate is a formal discussion between two sides: Proposition (supports the motion) and Opposition (argues against it). This category is exclusively for Girls participants.
 
@@ -100,7 +100,7 @@ Judging Criteria: Content, style, and strategy. Top teams qualify for octo-final
     title: "Strings of Eloquence",
     subtitle: "Poetry Recitation | نغمۂگل",
     description: "Celebrate the rich tradition of poetry in Islam, blending spirituality with eloquence.",
-    image: "/images/categories/poetry-recitation.jpg",
+    image: "/images/categories/poetry.png",
     pdf: "/guides/poetry-recitation-guide.pdf",
     details: `The poetry recitation category will celebrate the rich tradition of poetry in Islam, blending spirituality with eloquence. Delegates will recite verses from renowned poets as well as original works, celebrating themes of faith, devotion, and reflection.
 
@@ -119,7 +119,7 @@ Results and awards will be compiled separately for each age category.`
     title: "Sacred Strokes",
     subtitle: "Art Gallery | قوِس قزح",
     description: "Express Islamic teachings through calligraphy and still life painting.",
-    image: "/images/categories/art-gallery.jpg",
+    image: "/images/categories/art.png",
     pdf: "/guides/art-gallery-guide.pdf",
     details: `This themed exhibition highlights the elegance and depth of Islamic teachings and culture through the expressive arts of calligraphy and still life painting.
 
@@ -142,7 +142,7 @@ The exhibition showcases timeless beauty of traditional calligraphy and reflecti
     title: "Model United Nations",
     subtitle: "MUN (Boys Only)",
     description: "Engage in diplomatic discussions and represent countries in UN-style debates.",
-    image: "/images/categories/mun.jpg",
+    image: "/images/categories/mun.png",
     pdf: "/guides/mun-guide.pdf",
     details: `Details for Model United Nations will be announced soon.
 
