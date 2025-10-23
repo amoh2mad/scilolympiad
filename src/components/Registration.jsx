@@ -4,7 +4,7 @@ const Registration = () => {
   const [activeForm, setActiveForm] = useState('boys')
 
   // Updated embed URLs
-  const boysFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSf__nJwLch7KkyTRTZqZWG2GP2rIlWBwpbEDeFiHyast66unA/viewform?usp=headerviewform?embedded=true"
+  const boysFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSf__nJwLch7KkyTRTZqZWG2GP2rIlWBwpbEDeFiHyast66unA/viewform?embedded=true"
   const girlsFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSc6QPn-CydGTtRFNxsRjpFR7TDa2BXQ4NouwDbp0G_DKDTqpw/viewform?embedded=true"
 
   return (
