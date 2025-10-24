@@ -5,8 +5,7 @@ const Registration = () => {
 
   // Updated embed URLs
   const boysFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSf__nJwLch7KkyTRTZqZWG2GP2rIlWBwpbEDeFiHyast66unA/viewform?embedded=true"
-const girlsFormUrl =
-    "https://docs.google.com/forms/d/e/1FAIpQLSftPyh6D4TBm4bXMc2fsdhbCEcaRvP0K6T0bGoY-o0B8kOwDQ/viewform?embedded=true";    <section className="py-20 bg-white">
+const girlsFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSftPyh6D4TBm4bXMc2fsdhbCEcaRvP0K6T0bGoY-o0B8kOwDQ/viewform?embedded=true"
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
