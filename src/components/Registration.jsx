@@ -5,8 +5,8 @@ const Registration = () => {
 
   // Updated embed URLs
   const boysFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSf__nJwLch7KkyTRTZqZWG2GP2rIlWBwpbEDeFiHyast66unA/viewform?embedded=true"
-  const girlsFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSftPyh6D4TBm4bXMc2fsdhbCEcaRvP0K6T0bGoY-o0B8kOwDQ/viewform?embedded=true"
-    <section className="py-20 bg-white">
+const girlsFormUrl =
+    "https://docs.google.com/forms/d/e/1FAIpQLSftPyh6D4TBm4bXMc2fsdhbCEcaRvP0K6T0bGoY-o0B8kOwDQ/viewform?embedded=true";    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -113,7 +113,7 @@ const Registration = () => {
               Important Registration Information
             </h4>
             <ul className="text-blue-700 space-y-2">
-              <li>• Early Bird Registration: Rs. 2,000 (Until December 10th, 2025)</li>
+              <li>• Early Bird Registration: Rs. 2,000 (Until December 4th, 2025)</li>
               <li>• Regular Registration: Rs. 2,500 (Until January 10th, 2026)</li>
               <li>• Each team must participate in at least 1 category.</li>
               <li>• We will try our best to accomodate with any clashes.</li>
