@@ -110,8 +110,8 @@ Judging Criteria: Content, style, and strategy. Top teams qualify for octo-final
     title: "Model United Nations",
     subtitle: "MUN (Boys Only)",
     description: "Engage in diplomatic discussions and represent countries in UN-style debates.",
-    image: "/images/categories/mun.jpg", // 400×300px - Card image
-    imageInside: "/images/categories/mun-inside.jpg", // 800×500px - Modal image
+    image: "/images/categories/mun.png", // 400×300px - Card image
+    imageInside: "/images/categories/mun-inside.png", // 800×500px - Modal image
     fallbackColor: "from-gray-500 to-blue-400",
     pdf: "/guides/mun-guide.pdf",
     details: `Details for Model United Nations will be announced soon.
