@@ -7,7 +7,8 @@ const categoriesData = [
     title: "The Sweetness of Quran",
     subtitle: "Qiraat | حالوة القرآن",
     description: "Showcase the beauty of Quranic recitation with precision, accuracy and rhythm.",
-    image: "/images/categories/qiraat.png",
+    image: "/images/categories/qiraat.png", // 400×300px - Card image
+    imageInside: "/images/categories/qiraat-inside.png", // 800×500px - Modal image
     fallbackColor: "from-blue-500 to-blue-600",
     pdf: "/guides/qiraat-guide.pdf",
     details: `The Qiraat category will showcase the beauty of Quranic recitation, a sacred art in Islam. Delegates will recite verses from the Quran, capturing the rhythmic cadence and heartfelt spirituality of each line. This category emphasizes the profound connection between the art of recitation and the meanings of the Quranic verses, allowing listeners to experience the divine message through soulful expressions.
@@ -24,7 +25,8 @@ Truly, the skill of precision, accuracy and rhythm in Quranic recitation renders
     title: "Soulful Voices",
     subtitle: "Hamd/Nasheed/Naat | خيوط البالغة",
     description: "Express devotion through beautiful Islamic songs and spiritual praises.",
-    image: "/images/categories/naat.png",
+    image: "/images/categories/naat.png", // 400×300px - Card image
+    imageInside: "/images/categories/naat-inside.png", // 800×500px - Modal image
     fallbackColor: "from-purple-500 to-pink-500",
     pdf: "/guides/hamd-naat-guide.pdf",
     details: `In the Hamd, Nasheed, and Naat category, participants are invited to express their devotion and creativity through melodious recitations that reflect faith, gratitude, and spiritual love. This segment celebrates the harmony of voice and emotion, where participants convey deep reverence and beauty through meaningful verses.
@@ -42,7 +44,8 @@ Note: A list of acceptable and suggested Hamds, Naats, and poems will be uploade
     title: "Walk of Wisdom",
     subtitle: "Islamic Quiz | سفِربصيرت",
     description: "Test your knowledge of Islamic heritage, history, and developments.",
-    image: "/images/categories/quiz.png",
+    image: "/images/categories/quiz.png", // 400×300px - Card image
+    imageInside: "/images/categories/quiz-inside.png", // 800×500px - Modal image
     fallbackColor: "from-green-500 to-teal-500",
     pdf: "/guides/islamic-quiz-guide.pdf",
     details: `The Islamic Quiz category is designed to encourage learning and enthusiasm for Islamic heritage through engaging questions and challenges. It will test participants' knowledge of Makki/Madni life of our beloved Prophet (SAW) and his noble companions.
@@ -64,7 +67,8 @@ This interactive segment is an exciting opportunity for participants to deepen t
     title: "Radiant Realms",
     subtitle: "Writing | زوِرقلم",
     description: "Compose thoughtful articles and essays on Islamic culture, values and vision.",
-    image: "/images/categories/writing.png",
+    image: "/images/categories/writing.png", // 400×300px - Card image
+    imageInside: "/images/categories/writing-inside.png", // 800×500px - Modal image
     fallbackColor: "from-yellow-500 to-orange-500",
     pdf: "/guides/writing-guide.pdf",
     details: `In the content writing category, delegates are invited to compose thoughtful articles and essays on topics related to our culture, values and collective vision - in both English and Urdu. Writers will explore subjects such as the current World conflicts and future of its youth.
@@ -82,7 +86,8 @@ Guidelines:
     title: "Echoes of Enlightenment",
     subtitle: "Parliamentary Debates (Girls Only) | صدائےعرفان",
     description: "Participate in British Parliamentary style debates on contemporary issues.",
-    image: "/images/categories/parlimentary.png",
+    image: "/images/categories/parlimentary.png", // 400×300px - Card image
+    imageInside: "/images/categories/parlimentary-inside.png", // 800×500px - Modal image
     fallbackColor: "from-red-500 to-pink-500",
     pdf: "/guides/debates-guide.pdf",
     details: `Parliamentary debate is a formal discussion between two sides: Proposition (supports the motion) and Opposition (argues against it). This category is exclusively for Girls participants.
@@ -102,10 +107,28 @@ Judging Criteria: Content, style, and strategy. Top teams qualify for octo-final
   },
   {
     id: 6,
+    title: "Model United Nations",
+    subtitle: "MUN (Boys Only)",
+    description: "Engage in diplomatic discussions and represent countries in UN-style debates.",
+    image: "/images/categories/mun.jpg", // 400×300px - Card image
+    imageInside: "/images/categories/mun-inside.jpg", // 800×500px - Modal image
+    fallbackColor: "from-gray-500 to-blue-400",
+    pdf: "/guides/mun-guide.pdf",
+    details: `Details for Model United Nations will be announced soon.
+
+Category Exclusively for Boys Participants
+
+Model United Nations challenges participants to engage in diplomatic discussions, develop public speaking skills, and understand global issues from multiple perspectives through UN-style committee sessions.
+
+Please check back later for complete guidelines and competition details.`
+  },
+  {
+    id: 7,
     title: "Strings of Eloquence",
     subtitle: "Poetry Recitation | نغمۂگل",
     description: "Celebrate the rich tradition of poetry in Islam, blending spirituality with eloquence.",
-    image: "/images/categories/poetry.png",
+    image: "/images/categories/poetry.png", // 400×300px - Card image
+    imageInside: "/images/categories/poetry-inside.png", // 800×500px - Modal image
     fallbackColor: "from-indigo-500 to-purple-500",
     pdf: "/guides/poetry-recitation-guide.pdf",
     details: `The poetry recitation category will celebrate the rich tradition of poetry in Islam, blending spirituality with eloquence. Delegates will recite verses from renowned poets as well as original works, celebrating themes of faith, devotion, and reflection.
@@ -121,11 +144,35 @@ Guidelines:
 Results and awards will be compiled separately for each age category.`
   },
   {
-    id: 7,
+    id: 8,
+    title: "Envision",
+    subtitle: "Content Creation | عکس بندی",
+    description: "Explore art and culture through digital media and creative video presentations.",
+    image: "/images/categories/content-creation.png", // 400×300px - Card image
+    imageInside: "/images/categories/content-creation-inside.png", // 800×500px - Modal image
+    fallbackColor: "from-teal-500 to-cyan-500",
+    pdf: "/guides/content-creation-guide.pdf",
+    details: `This section invites delegates to explore art and culture through digital media and creative formats. Content creators are encouraged to produce visual stories and video presentations that highlight the beauty and diversity of traditions and faith. This platform aims to engage modern audiences and inspire a renewed appreciation for our culture in the digital age.
+
+Guidelines:
+- Delegates are required to choose from one of the provided themes
+- Video duration: 3-4 minutes
+- Both edited and unedited versions must be submitted
+- Topics for videography will be outlined in the study guide
+- Voiceovers are not allowed
+- Video must be in MP4 format
+- Submission deadline: January 16th, 2026
+
+Note:
+Minor editing and color grading is allowed, but the addition or removal of external elements (including major Photoshop alterations) is strictly prohibited.`
+  },
+  {
+    id: 9,
     title: "Sacred Strokes",
     subtitle: "Art Gallery | قوس قزح",
     description: "Express Islamic teachings through calligraphy and still life painting.",
-    image: "/images/categories/art.png",
+    image: "/images/categories/art.png", // 400×300px - Card image
+    imageInside: "/images/categories/art-inside.png", // 800×500px - Modal image
     fallbackColor: "from-cyan-500 to-blue-500",
     pdf: "/guides/art-gallery-guide.pdf",
     details: `This themed exhibition highlights the elegance and depth of Islamic teachings and culture through the expressive arts of calligraphy and still life painting.
@@ -143,22 +190,6 @@ Requirements:
 - Arabic script must be used respectfully
 
 The exhibition showcases timeless beauty of traditional calligraphy and reflective charm of still life art.`
-  },
-  {
-    id: 8,
-    title: "Model United Nations",
-    subtitle: "MUN (Boys Only)",
-    description: "Engage in diplomatic discussions and represent countries in UN-style debates.",
-    image: "/images/categories/mun.jpg",
-    fallbackColor: "from-gray-500 to-blue-400",
-    pdf: "/guides/mun-guide.pdf",
-    details: `Details for Model United Nations will be announced soon.
-
-Category Exclusively for Boys Participants
-
-Model United Nations challenges participants to engage in diplomatic discussions, develop public speaking skills, and understand global issues from multiple perspectives through UN-style committee sessions.
-
-Please check back later for complete guidelines and competition details.`
   }
 ]
 
@@ -300,7 +331,7 @@ const CategoryModal = ({ category, isOpen, onClose }) => {
                 }`}></div>
                 
                 <img 
-                  src={category.image} 
+                  src={category.imageInside} 
                   alt={category.title}
                   className={`w-full h-full object-cover transition-opacity duration-300 ${
                     modalImageLoaded && !modalImageError ? 'opacity-100' : 'opacity-0'
@@ -356,11 +387,11 @@ const Categories = () => {
             Competition Categories
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Explore 8 Islamic and academic categories to showcase your talents in SCIL Olympiad 2026
+            Explore 9 Islamic and academic categories to showcase your talents in SCIL Olympiad 2026
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
           {categoriesData.map((category) => (
             <CategoryCard
               key={category.id}
