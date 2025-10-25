@@ -45,7 +45,7 @@ const studyGuidesData = [
   {
     id: 5,
     title: "Echoes of Enlightenment",
-    subtitle: "Parliamentary Debates (Girls Only) | صدائےعرفان",
+    subtitle: "Parliamentary Debates | صدائےعرفان",
     description: "Rules and format for parliamentary debates",
     pdf: "/guides/debates-guide.pdf",
     category: "Debates",
@@ -54,6 +54,16 @@ const studyGuidesData = [
   },
   {
     id: 6,
+    title: "Model United Nations",
+    subtitle: "MUN (Boys Only)",
+    description: "Rules and procedures for Model UN",
+    pdf: "/guides/mun-guide.pdf",
+    category: "MUN",
+    lastUpdated: "Coming Soon",
+    fileSize: "—"
+  },
+  {
+    id: 7,
     title: "Strings of Eloquence",
     subtitle: "Poetry Recitation | نغمۂگل",
     description: "Selected poems and recitation guidelines",
@@ -63,24 +73,24 @@ const studyGuidesData = [
     fileSize: "1.9 MB"
   },
   {
-    id: 7,
+    id: 8,
+    title: "Envision",
+    subtitle: "Content Creation | عکس بندی",
+    description: "Video creation guidelines and theme selection",
+    pdf: "/guides/content-creation-guide.pdf",
+    category: "Content Creation",
+    lastUpdated: "2025-01-15",
+    fileSize: "2.7 MB"
+  },
+  {
+    id: 9,
     title: "Sacred Strokes",
-    subtitle: "Art Gallery | قوِس قزح",
+    subtitle: "Art Gallery | قوس قزح",
     description: "Guidelines for calligraphy and still life art",
     pdf: "/guides/art-gallery-guide.pdf",
     category: "Art",
     lastUpdated: "2025-01-15",
     fileSize: "4.1 MB"
-  },
-  {
-    id: 8,
-    title: "Model United Nations",
-    subtitle: "MUN (Boys Only)",
-    description: "Rules and procedures for Model UN",
-    pdf: "/guides/mun-guide.pdf",
-    category: "MUN",
-    lastUpdated: "Coming Soon",
-    fileSize: "—"
   }
 ]
 
@@ -196,9 +206,10 @@ const StudyGuides = () => {
     { id: 'Islamic Quiz', name: 'Islamic Quiz' },
     { id: 'Writing', name: 'Writing' },
     { id: 'Debates', name: 'Debates' },
+    { id: 'MUN', name: 'MUN' },
     { id: 'Poetry', name: 'Poetry' },
-    { id: 'Art', name: 'Art' },
-    { id: 'MUN', name: 'MUN' }
+    { id: 'Content Creation', name: 'Content Creation' },
+    { id: 'Art', name: 'Art' }
   ]
 
   const filteredGuides = filter === 'all' 
