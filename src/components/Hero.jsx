@@ -51,7 +51,7 @@ const BoysCountdownTimer = () => {
   })
 
   useEffect(() => {
-    const eventDate = new Date('2026-01-30T09:00:00').getTime()
+    const eventDate = new Date('2026-02-07T09:00:00').getTime()
 
     const timer = setInterval(() => {
       const now = new Date().getTime()
