@@ -422,4 +422,63 @@ const CategoryModal = ({ category, isOpen, onClose }) => {
                 ) : (
                   <button
                     onClick={() => handleDownloadGuide(category.pdf)}
-                    className="bg-blue-600 text-white
+                    className="bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center gap-2"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Download Study Guide
+                  </button>
+                )}
+                <button
+                  onClick={handleGoToRegistration}
+                  className="border-2 border-blue-600 text-blue-600 py-3 px-4 rounded-lg font-medium hover:bg-blue-50 transition-colors duration-200"
+                >
+                  Go to Registration
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  )
+}
+
+const Categories = () => {
+  const [selectedCategory, setSelectedCategory] = useState(null)
+
+  return (
+    <section className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Competition Categories
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Explore 10 Islamic and academic categories to showcase your talents in SCIL Olympiad 2026
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {categoriesData.map((category) => (
+            <CategoryCard
+              key={category.id}
+              category={category}
+              onClick={() => setSelectedCategory(category)}
+            />
+          ))}
+        </div>
+
+      </div>
+
+      <CategoryModal
+        category={selectedCategory}
+        isOpen={!!selectedCategory}
+        onClose={() => setSelectedCategory(null)}
+      />
+    </section>
+  )
+}
+
+export default Categories
