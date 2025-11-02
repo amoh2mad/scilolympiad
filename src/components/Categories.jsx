@@ -180,7 +180,7 @@ Guidelines:
 Languages: English and Urdu
 Categories: Humorous and Serious
 Duration: 4 minutes per speech`
-  {
+  },
   id: 9,
   title: "Envision",
   subtitle: "Content Creation | عکس بندی",
