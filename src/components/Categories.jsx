@@ -115,8 +115,8 @@ Judging Criteria: Content, style, and strategy. Top teams qualify for octo-final
     title: "Model United Nations",
     subtitle: "MUN (Boys Only)",
     description: "Engage in diplomatic discussions and represent countries in UN-style debates.",
-    image: "/images/categories/mun.jpg",
-    imageInside: "/images/categories/mun-inside.jpg",
+    image: "/images/categories/mun.png",
+    imageInside: "/images/categories/mun-inside.png",
     fallbackColor: "from-gray-500 to-blue-400",
     pdf: "/guides/mun-guide.pdf",
     details: `Model United Nations is a simulation of the United Nations, where participants act as delegates representing different countries. Delegates debate, negotiate, and collaborate to address global issues through formal sessions.
