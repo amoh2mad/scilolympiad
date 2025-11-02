@@ -7,8 +7,8 @@ const categoriesData = [
     title: "The Sweetness of Quran",
     subtitle: "Qiraat | حالوة القرآن",
     description: "Showcase the beauty of Quranic recitation with precision, accuracy and rhythm.",
-    image: "/images/categories/qiraat.png", // 400×300px - Card image
-    imageInside: "/images/categories/qiraat-inside.png", // 800×500px - Modal image
+    image: "/images/categories/qiraat.png",
+    imageInside: "/images/categories/qiraat-inside.png",
     fallbackColor: "from-blue-500 to-blue-600",
     pdf: "/guides/qiraat-guide.pdf",
     details: `The Qiraat category will showcase the beauty of Quranic recitation, a sacred art in Islam. Delegates will recite verses from the Quran, capturing the rhythmic cadence and heartfelt spirituality of each line. This category emphasizes the profound connection between the art of recitation and the meanings of the Quranic verses, allowing listeners to experience the divine message through soulful expressions.
@@ -25,8 +25,8 @@ Truly, the skill of precision, accuracy and rhythm in Quranic recitation renders
     title: "Soulful Voices",
     subtitle: "Hamd/Nasheed/Naat | خيوط البالغة",
     description: "Express devotion through beautiful Islamic songs and spiritual praises.",
-    image: "/images/categories/naat.png", // 400×300px - Card image
-    imageInside: "/images/categories/naat-inside.png", // 800×500px - Modal image
+    image: "/images/categories/naat.png",
+    imageInside: "/images/categories/naat-inside.png",
     fallbackColor: "from-purple-500 to-pink-500",
     pdf: "/guides/hamd-naat-guide.pdf",
     details: `In the Hamd, Nasheed, and Naat category, participants are invited to express their devotion and creativity through melodious recitations that reflect faith, gratitude, and spiritual love. This segment celebrates the harmony of voice and emotion, where participants convey deep reverence and beauty through meaningful verses.
@@ -44,10 +44,15 @@ Note: A list of acceptable and suggested Hamds, Naats, and poems will be uploade
     title: "Walk of Wisdom",
     subtitle: "Islamic Quiz | سفِربصيرت",
     description: "Test your knowledge of Islamic heritage, history, and developments.",
-    image: "/images/categories/quiz.png", // 400×300px - Card image
-    imageInside: "/images/categories/quiz-inside.png", // 800×500px - Modal image
+    image: "/images/categories/quiz.png",
+    imageInside: "/images/categories/quiz-inside.png",
     fallbackColor: "from-green-500 to-teal-500",
     pdf: "/guides/islamic-quiz-guide.pdf",
+    hasMultipleGuides: true,
+    guides: [
+      { name: "U-17/Open", pdf: "/guides/islamic-quiz-u17-open.pdf" },
+      { name: "Grade 6-8", pdf: "/guides/islamic-quiz-grade6-8.pdf" }
+    ],
     details: `The Islamic Quiz category is designed to encourage learning and enthusiasm for Islamic heritage through engaging questions and challenges. It will test participants' knowledge of Makki/Madni life of our beloved Prophet (SAW) and his noble companions.
 
 Syllabus:
@@ -67,8 +72,8 @@ This interactive segment is an exciting opportunity for participants to deepen t
     title: "Radiant Realms",
     subtitle: "Writing | زوِرقلم",
     description: "Compose thoughtful articles and essays on Islamic culture, values and vision.",
-    image: "/images/categories/writing.png", // 400×300px - Card image
-    imageInside: "/images/categories/writing-inside.png", // 800×500px - Modal image
+    image: "/images/categories/writing.png",
+    imageInside: "/images/categories/writing-inside.png",
     fallbackColor: "from-yellow-500 to-orange-500",
     pdf: "/guides/writing-guide.pdf",
     details: `In the content writing category, delegates are invited to compose thoughtful articles and essays on topics related to our culture, values and collective vision - in both English and Urdu. Writers will explore subjects such as the current World conflicts and future of its youth.
@@ -86,8 +91,8 @@ Guidelines:
     title: "Echoes of Enlightenment",
     subtitle: "Parliamentary Debates (Girls Only) | صدائےعرفان",
     description: "Participate in British Parliamentary style debates on contemporary issues.",
-    image: "/images/categories/parlimentary.png", // 400×300px - Card image
-    imageInside: "/images/categories/parlimentary-inside.png", // 800×500px - Modal image
+    image: "/images/categories/parlimentary.png",
+    imageInside: "/images/categories/parlimentary-inside.png",
     fallbackColor: "from-red-500 to-pink-500",
     pdf: "/guides/debates-guide.pdf",
     details: `Parliamentary debate is a formal discussion between two sides: Proposition (supports the motion) and Opposition (argues against it). This category is exclusively for Girls participants.
@@ -110,27 +115,39 @@ Judging Criteria: Content, style, and strategy. Top teams qualify for octo-final
     title: "Model United Nations",
     subtitle: "MUN (Boys Only)",
     description: "Engage in diplomatic discussions and represent countries in UN-style debates.",
-    image: "/images/categories/mun.png", // 400×300px - Card image
-    imageInside: "/images/categories/mun-inside.png", // 800×500px - Modal image
+    image: "/images/categories/mun.jpg",
+    imageInside: "/images/categories/mun-inside.jpg",
     fallbackColor: "from-gray-500 to-blue-400",
     pdf: "/guides/mun-guide.pdf",
-    details: `Details for Model United Nations will be announced soon.
+    details: `Model United Nations is a simulation of the United Nations, where participants act as delegates representing different countries. Delegates debate, negotiate, and collaborate to address global issues through formal sessions.
 
-Category Exclusively for Boys Participants
+Committee Structure:
+- Formal debate (speeches and moderated caucuses)
+- Unmoderated caucuses (informal discussion and drafting)
+- Resolution writing (proposing solutions through frameworks)
 
-Model United Nations challenges participants to engage in diplomatic discussions, develop public speaking skills, and understand global issues from multiple perspectives through UN-style committee sessions.
+Guidelines:
+- Speeches focus on the country's stance, policies, and proposed actions
+- Delegates use diplomatic language and follow rules of procedure
+- Work towards consensus or voting on resolutions
+- Chairs evaluate delegates on content, diplomacy, communication, and adherence to rules
 
-Please check back later for complete guidelines and competition details.`
+Category Exclusively for Boys Participants.`
   },
   {
     id: 7,
     title: "Strings of Eloquence",
     subtitle: "Poetry Recitation | نغمۂگل",
     description: "Celebrate the rich tradition of poetry in Islam, blending spirituality with eloquence.",
-    image: "/images/categories/poetry.png", // 400×300px - Card image
-    imageInside: "/images/categories/poetry-inside.png", // 800×500px - Modal image
+    image: "/images/categories/poetry.png",
+    imageInside: "/images/categories/poetry-inside.png",
     fallbackColor: "from-indigo-500 to-purple-500",
     pdf: "/guides/poetry-recitation-guide.pdf",
+    hasMultipleGuides: true,
+    guides: [
+      { name: "Urdu", pdf: "/guides/poetry-urdu.pdf" },
+      { name: "English", pdf: "/guides/poetry-english.pdf" }
+    ],
     details: `The poetry recitation category will celebrate the rich tradition of poetry in Islam, blending spirituality with eloquence. Delegates will recite verses from renowned poets as well as original works, celebrating themes of faith, devotion, and reflection.
 
 Guidelines:
@@ -145,34 +162,73 @@ Results and awards will be compiled separately for each age category.`
   },
   {
     id: 8,
-    title: "Envision",
-    subtitle: "Content Creation | عکس بندی",
-    description: "Explore art and culture through digital media and creative video presentations.",
-    image: "/images/categories/content-creation.png", // 400×300px - Card image
-    imageInside: "/images/categories/content-creation-inside.png", // 800×500px - Modal image
-    fallbackColor: "from-teal-500 to-cyan-500",
-    pdf: "/guides/content-creation-guide.pdf",
-    details: `This section invites delegates to explore art and culture through digital media and creative formats. Content creators are encouraged to produce visual stories and video presentations that highlight the beauty and diversity of traditions and faith. This platform aims to engage modern audiences and inspire a renewed appreciation for our culture in the digital age.
+    title: "Voices of Vision",
+    subtitle: "Declamation | آواز اے بصیرت",
+    description: "Deliver powerful speeches in English and Urdu across humorous and serious categories.",
+    image: "/images/categories/declamation.png",
+    imageInside: "/images/categories/declamation-inside.png",
+    fallbackColor: "from-orange-500 to-red-500",
+    pdf: "/guides/declamation-guide.pdf",
+    details: `Declamation consists of speeches that are 4 minutes long. It will be in two languages: English and Urdu, and then will be divided into further two categories: Humorous and Serious. The topics will be shared in the study guide.
 
 Guidelines:
-- Delegates are required to choose from one of the provided themes
-- Video duration: 3-4 minutes
-- Both edited and unedited versions must be submitted
-- Topics for videography will be outlined in the study guide
-- Voiceovers are not allowed
-- Video must be in MP4 format
-- Submission deadline: January 16th, 2026
+- No racist or abusive language should be used
+- Participants must not exceed the given time limit
+- A maximum of 15 additional seconds will be allowed
+- The judges will evaluate based on content expressions and body language
 
-Note:
-Minor editing and color grading is allowed, but the addition or removal of external elements (including major Photoshop alterations) is strictly prohibited.`
+Languages: English and Urdu
+Categories: Humorous and Serious
+Duration: 4 minutes per speech`
+  {
+  id: 9,
+  title: "Envision",
+  subtitle: "Content Creation | عکس بندی",
+  description: "Create compelling videos exploring themes of mercy, impact, and parallel realities.",
+  image: "/images/categories/content-creation.png",
+  imageInside: "/images/categories/content-creation-inside.png",
+  fallbackColor: "from-teal-500 to-cyan-500",
+  pdf: "/guides/content-creation-guide.pdf",
+  details: `This section invites delegates to explore art and culture through digital media and creative formats. Content creators are encouraged to produce visual stories and video presentations that highlight the beauty and diversity of traditions and faith.
+
+Guidelines:
+- Students from Under 17 and Open age categories may participate
+- Team participation allowed (up to 3 members)
+- Videos can include voiceovers, narration, or captions
+- Each video must include: Participant name, Class, Video title, Chosen topic
+- Submit final work with behind-the-scenes clips showing editing process
+- No CGI or professional editing permitted to ensure originality
+
+Submission Requirements:
+1. Final version of your video
+2. Behind-the-scenes video showcasing editing process
+
+Judging Criteria:
+- Creative Excellence: Originality and creativity in presentation
+- Content Accuracy: Factual correctness and respectful presentation
+- Visual Presentation Quality: Clarity and effectiveness of visuals
+- Relevance to Theme: Alignment with assigned theme
+- Presentation Flow: Organization and engagement
+
+Topics (Choose one):
+- He Heard Me Anyway - mercy, even when we fail
+- The Ripple I Created - small moves, big impact
+- Parallel Realities - exploring the fine line between what is and what could be
+
+Submission Deadlines:
+- Girls: January 16th, 2026 (scilolympiad.info@gmail.com)
+- Boys: February 2nd, 2026 (scil.event.info@gmail.com)
+
+Note: Entries will be screened using AI detection tools. Excessive digital enhancement may result in point deductions or disqualification.`
+}
   },
   {
-    id: 9,
+    id: 10,
     title: "Sacred Strokes",
     subtitle: "Art Gallery | قوس قزح",
     description: "Express Islamic teachings through calligraphy and still life painting.",
-    image: "/images/categories/art.png", // 400×300px - Card image
-    imageInside: "/images/categories/art-inside.png", // 800×500px - Modal image
+    image: "/images/categories/art.png",
+    imageInside: "/images/categories/art-inside.png",
     fallbackColor: "from-cyan-500 to-blue-500",
     pdf: "/guides/art-gallery-guide.pdf",
     details: `This themed exhibition highlights the elegance and depth of Islamic teachings and culture through the expressive arts of calligraphy and still life painting.
@@ -213,14 +269,11 @@ const CategoryCard = ({ category, onClick }) => {
       className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300 group"
       onClick={onClick}
     >
-      {/* Image Container with Fixed Aspect Ratio */}
       <div className="relative h-48 bg-gray-100 overflow-hidden">
-        {/* Background Gradient Fallback */}
         <div className={`absolute inset-0 bg-gradient-to-br ${category.fallbackColor} transition-opacity duration-300 ${
           imageLoaded && !imageError ? 'opacity-0' : 'opacity-100'
         }`}></div>
         
-        {/* Actual Image */}
         <img 
           src={category.image} 
           alt={category.title}
@@ -232,7 +285,6 @@ const CategoryCard = ({ category, onClick }) => {
           loading="lazy"
         />
         
-        {/* Overlay with Category Info */}
         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300 flex items-end">
           <div className="p-4 w-full text-white">
             <h3 className="font-semibold text-lg mb-1 drop-shadow-md">{category.title}</h3>
@@ -240,7 +292,6 @@ const CategoryCard = ({ category, onClick }) => {
           </div>
         </div>
         
-        {/* Loading Skeleton */}
         {!imageLoaded && (
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
@@ -248,7 +299,6 @@ const CategoryCard = ({ category, onClick }) => {
         )}
       </div>
 
-      {/* Content Below Image */}
       <div className="p-4">
         <p className="text-gray-600 text-sm mb-4 line-clamp-2">
           {category.description}
@@ -268,11 +318,11 @@ const CategoryModal = ({ category, isOpen, onClose }) => {
   const [modalImageLoaded, setModalImageLoaded] = useState(false)
   const [modalImageError, setModalImageError] = useState(false)
 
-  const handleDownloadGuide = () => {
-    if (category.pdf) {
+  const handleDownloadGuide = (pdfUrl, guideName = '') => {
+    if (pdfUrl) {
       const link = document.createElement('a')
-      link.href = category.pdf
-      link.download = `${category.title} - Study Guide.pdf`
+      link.href = pdfUrl
+      link.download = `${category.title} - ${guideName || 'Study Guide'}.pdf`
       document.body.appendChild(link)
       link.click()
       document.body.removeChild(link)
@@ -324,7 +374,6 @@ const CategoryModal = ({ category, isOpen, onClose }) => {
                 </button>
               </div>
               
-              {/* Modal Image with Better Handling */}
               <div className="relative h-64 rounded-lg mb-4 overflow-hidden bg-gray-100">
                 <div className={`absolute inset-0 bg-gradient-to-br ${category.fallbackColor} transition-opacity duration-300 ${
                   modalImageLoaded && !modalImageError ? 'opacity-0' : 'opacity-100'
@@ -351,19 +400,39 @@ const CategoryModal = ({ category, isOpen, onClose }) => {
                 {category.details}
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-3">
-                <button
-                  onClick={handleDownloadGuide}
-                  className="flex-1 bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center gap-2"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                  Download Study Guide
-                </button>
+              <div className="flex flex-col gap-3">
+                {category.hasMultipleGuides ? (
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-gray-800">Download Study Guides:</h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {category.guides.map((guide, index) => (
+                        <button
+                          key={index}
+                          onClick={() => handleDownloadGuide(guide.pdf, guide.name)}
+                          className="bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center gap-2"
+                        >
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                          {guide.name}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <button
+                    onClick={() => handleDownloadGuide(category.pdf)}
+                    className="bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center gap-2"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Download Study Guide
+                  </button>
+                )}
                 <button
                   onClick={handleGoToRegistration}
-                  className="flex-1 border-2 border-blue-600 text-blue-600 py-3 px-4 rounded-lg font-medium hover:bg-blue-50 transition-colors duration-200"
+                  className="border-2 border-blue-600 text-blue-600 py-3 px-4 rounded-lg font-medium hover:bg-blue-50 transition-colors duration-200"
                 >
                   Go to Registration
                 </button>
@@ -387,11 +456,11 @@ const Categories = () => {
             Competition Categories
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Explore 9 Islamic and academic categories to showcase your talents in SCIL Olympiad 2026
+            Explore 10 Islamic and academic categories to showcase your talents in SCIL Olympiad 2026
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {categoriesData.map((category) => (
             <CategoryCard
               key={category.id}

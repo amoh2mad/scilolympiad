@@ -29,8 +29,12 @@ const studyGuidesData = [
     description: "Syllabus and preparation materials for Islamic Quiz",
     pdf: "/guides/islamic-quiz-guide.pdf",
     category: "Islamic Quiz",
-    lastUpdated: "2025-01-15",
-    fileSize: "3.2 MB"
+    hasMultipleGuides: true,
+    guides: [
+      { name: "U-17/Open", pdf: "/guides/islamic-quiz-u17-open.pdf", fileSize: "3.2 MB" },
+      { name: "Grade 6-8", pdf: "/guides/islamic-quiz-grade6-8.pdf", fileSize: "2.8 MB" }
+    ],
+    lastUpdated: "2025-01-15"
   },
   {
     id: 4,
@@ -59,8 +63,8 @@ const studyGuidesData = [
     description: "Rules and procedures for Model UN",
     pdf: "/guides/mun-guide.pdf",
     category: "MUN",
-    lastUpdated: "Coming Soon",
-    fileSize: "—"
+    lastUpdated: "2025-01-15",
+    fileSize: "3.5 MB"
   },
   {
     id: 7,
@@ -69,11 +73,25 @@ const studyGuidesData = [
     description: "Selected poems and recitation guidelines",
     pdf: "/guides/poetry-recitation-guide.pdf",
     category: "Poetry",
-    lastUpdated: "2025-01-15",
-    fileSize: "1.9 MB"
+    hasMultipleGuides: true,
+    guides: [
+      { name: "U-17/Open", pdf: "/guides/poetry-u17-open.pdf", fileSize: "2.1 MB" },
+      { name: "Grade 6-8", pdf: "/guides/poetry-grade6-8.pdf", fileSize: "1.8 MB" }
+    ],
+    lastUpdated: "2025-01-15"
   },
   {
     id: 8,
+    title: "Voices of Vision",
+    subtitle: "Declamation | آواز اے بصیرت",
+    description: "Speech guidelines and topic selection",
+    pdf: "/guides/declamation-guide.pdf",
+    category: "Declamation",
+    lastUpdated: "2025-01-15",
+    fileSize: "2.3 MB"
+  },
+  {
+    id: 9,
     title: "Envision",
     subtitle: "Content Creation | عکس بندی",
     description: "Video creation guidelines and theme selection",
@@ -83,7 +101,7 @@ const studyGuidesData = [
     fileSize: "2.7 MB"
   },
   {
-    id: 9,
+    id: 10,
     title: "Sacred Strokes",
     subtitle: "Art Gallery | قوس قزح",
     description: "Guidelines for calligraphy and still life art",
@@ -95,11 +113,11 @@ const studyGuidesData = [
 ]
 
 const StudyGuideModal = ({ guide, isOpen, onClose }) => {
-  const handleDownload = () => {
-    if (guide.pdf && guide.lastUpdated !== "Coming Soon") {
+  const handleDownload = (pdfUrl, guideName = '') => {
+    if (pdfUrl) {
       const link = document.createElement('a')
-      link.href = guide.pdf
-      link.download = `${guide.title} - Study Guide.pdf`
+      link.href = pdfUrl
+      link.download = `${guide.title} - ${guideName || 'Study Guide'}.pdf`
       document.body.appendChild(link)
       link.click()
       document.body.removeChild(link)
@@ -150,43 +168,33 @@ const StudyGuideModal = ({ guide, isOpen, onClose }) => {
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-500">Last Updated:</span>
-                  <span className={`font-medium ${
-                    guide.lastUpdated === "Coming Soon" ? "text-orange-600" : "text-gray-800"
-                  }`}>
-                    {guide.lastUpdated}
-                  </span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-500">File Size:</span>
-                  <span className="text-gray-800 font-medium">{guide.fileSize}</span>
+                  <span className="text-gray-800 font-medium">{guide.lastUpdated}</span>
                 </div>
               </div>
               
-              <button
-                onClick={handleDownload}
-                disabled={guide.lastUpdated === "Coming Soon"}
-                className={`w-full py-3 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center gap-2 ${
-                  guide.lastUpdated === "Coming Soon"
-                    ? "bg-gray-400 text-gray-200 cursor-not-allowed"
-                    : "bg-blue-600 text-white hover:bg-blue-700"
-                }`}
-              >
-                {guide.lastUpdated === "Coming Soon" ? (
-                  <>
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    Coming Soon
-                  </>
-                ) : (
-                  <>
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                    Download Guide
-                  </>
-                )}
-              </button>
+              {guide.hasMultipleGuides ? (
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-gray-800 text-sm">Available Guides:</h4>
+                  {guide.guides.map((subGuide, index) => (
+                    <button
+                      key={index}
+                      onClick={() => handleDownload(subGuide.pdf, subGuide.name)}
+                      className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 flex items-center justify-between"
+                    >
+                      <span>{subGuide.name}</span>
+                      <span className="text-blue-200 text-xs">{subGuide.fileSize}</span>
+                    </button>
+                  ))}
+                </div>
+              ) : (
+                <button
+                  onClick={() => handleDownload(guide.pdf)}
+                  className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 flex items-center justify-between"
+                >
+                  <span>Download Study Guide</span>
+                  <span className="text-blue-200 text-xs">{guide.fileSize}</span>
+                </button>
+              )}
             </div>
           </motion.div>
         </motion.div>
@@ -208,6 +216,7 @@ const StudyGuides = () => {
     { id: 'Debates', name: 'Debates' },
     { id: 'MUN', name: 'MUN' },
     { id: 'Poetry', name: 'Poetry' },
+    { id: 'Declamation', name: 'Declamation' },
     { id: 'Content Creation', name: 'Content Creation' },
     { id: 'Art', name: 'Art' }
   ]
@@ -265,9 +274,7 @@ const StudyGuides = () => {
                       {guide.subtitle}
                     </p>
                   </div>
-                  <div className={`w-3 h-3 rounded-full ml-2 flex-shrink-0 ${
-                    guide.lastUpdated === "Coming Soon" ? "bg-orange-400" : "bg-green-400"
-                  }`}></div>
+                  <div className="w-3 h-3 rounded-full ml-2 flex-shrink-0 bg-green-400"></div>
                 </div>
                 
                 <p className="text-gray-600 text-sm mb-4 line-clamp-2">
@@ -276,7 +283,7 @@ const StudyGuides = () => {
                 
                 <div className="flex justify-between items-center text-xs text-gray-500">
                   <span>Updated: {guide.lastUpdated}</span>
-                  <span>{guide.fileSize}</span>
+                  <span>{guide.hasMultipleGuides ? 'Multiple files' : guide.fileSize}</span>
                 </div>
                 
                 <div className="mt-4 flex items-center justify-between">
@@ -284,7 +291,7 @@ const StudyGuides = () => {
                     {guide.category}
                   </span>
                   <button className="text-blue-600 hover:text-blue-700 transition-colors duration-200 flex items-center gap-1 text-sm">
-                    {guide.lastUpdated === "Coming Soon" ? "View Details" : "Download"}
+                    Download
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -297,25 +304,4 @@ const StudyGuides = () => {
 
         {/* Empty State */}
         {filteredGuides.length === 0 && (
-          <div className="text-center py-12">
-            <div className="text-gray-400 mb-4">
-              <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-            </div>
-            <h3 className="text-lg font-medium text-gray-600 mb-2">No guides available</h3>
-            <p className="text-gray-500">Study guides for this category will be available soon.</p>
-          </div>
-        )}
-      </div>
-
-      <StudyGuideModal
-        guide={selectedGuide}
-        isOpen={!!selectedGuide}
-        onClose={() => setSelectedGuide(null)}
-      />
-    </section>
-  )
-}
-
-export default StudyGuides
+         
