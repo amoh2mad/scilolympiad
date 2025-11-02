@@ -51,7 +51,7 @@ const BoysCountdownTimer = () => {
   })
 
   useEffect(() => {
-    const eventDate = new Date('2026-02-07T09:00:00').getTime()
+    const eventDate = new Date('2026-02-06T09:00:00').getTime()
 
     const timer = setInterval(() => {
       const now = new Date().getTime()
@@ -142,7 +142,7 @@ const Hero = () => {
             {/* Boys Event Timer */}
             <div className="bg-gradient-to-br from-blue-600/80 to-cyan-600/80 rounded-2xl p-6 shadow-xl backdrop-blur-sm border border-white/20">
               <h3 className="text-2xl font-bold mb-4 text-white">Boys Event Starts In</h3>
-              <p className="text-blue-100 mb-4">February 7 - 9, 2026</p>
+              <p className="text-blue-100 mb-4">February 6 - 8, 2026</p>
               <BoysCountdownTimer />
               <div className="mt-4 text-sm text-blue-200">
                 3 days of competitions, workshops, and spiritual growth
