@@ -31,7 +31,7 @@ const studyGuidesData = [
     category: "Islamic Quiz",
     hasMultipleGuides: true,
     guides: [
-      { name: "U-17/Open", pdf: "/guides/islamic-quiz-u17-open.pdf", fileSize: "3.2 MB" },
+      { name: "U-17/Open", pdf: "/guides/islamic-quiz-u-17-open.pdf", fileSize: "3.2 MB" },
       { name: "Grade 6-8", pdf: "/guides/islamic-quiz-grade6-8.pdf", fileSize: "2.8 MB" }
     ],
     lastUpdated: "2025-01-15"
