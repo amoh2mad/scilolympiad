@@ -75,8 +75,8 @@ const studyGuidesData = [
     category: "Poetry",
     hasMultipleGuides: true,
     guides: [
-      { name: "U-17/Open", pdf: "/guides/poetry-u17-open.pdf", fileSize: "2.1 MB" },
-      { name: "Grade 6-8", pdf: "/guides/poetry-grade6-8.pdf", fileSize: "1.8 MB" }
+      { name: "Urdu", pdf: "/guides/poetry-urdu.pdf", fileSize: "2.1 MB" },
+      { name: "English", pdf: "/guides/poetry-english.pdf", fileSize: "1.8 MB" }
     ],
     lastUpdated: "2025-01-15"
   },
