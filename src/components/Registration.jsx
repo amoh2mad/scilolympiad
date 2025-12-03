@@ -25,7 +25,7 @@ const Registration = () => {
             <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-center">
               <h3 className="text-2xl font-bold text-green-800 mb-2">Early Bird Registration</h3>
               <p className="text-3xl font-bold text-green-600 mb-2">Rs. 2,000</p>
-              <p className="text-green-700">Until December 10th, 2025</p>
+              <p className="text-green-700">Until December 4th, 2025</p>
             </div>
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 text-center">
               <h3 className="text-2xl font-bold text-blue-800 mb-2">Regular Registration</h3>
@@ -68,7 +68,7 @@ const Registration = () => {
               <h3 className="text-2xl font-bold text-center text-blue-600 mb-6">
                 Boys Registration Form
               </h3>
-              <p className="text-center text-gray-600 mb-4">Event Dates: January 30 - February 1, 2026</p>
+              <p className="text-center text-gray-600 mb-4">Event Dates: February 6th - February 8th, 2026</p>
               <div className="bg-gray-100 rounded-lg p-1">
                 <iframe 
                   src={boysFormUrl}
