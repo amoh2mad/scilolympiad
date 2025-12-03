@@ -115,8 +115,8 @@ const Registration = () => {
               Important Registration Information
             </h4>
             <ul className="text-blue-700 space-y-2">
-              <li>• Early Bird Registration: Rs. 2,000 (Until December 4th, 2025)</li>
-              <li>• Regular Registration: Rs. 2,500 (Until January 10th, 2026)</li>
+              <li>• Early Bird Registration: Rs. 2,000 (Until December 10th, 2025)</li>
+              <li>• Regular Registration: Rs. 2,500 (Until January 30th, 2026)</li>
               <li>• Each team must participate in at least 1 category.</li>
               <li>• We will try our best to accomodate with any clashes.</li>
               <li>• Payment should be made only to the Meezan Bank account provided in the form</li>
