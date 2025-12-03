@@ -145,8 +145,8 @@ Category Exclusively for Boys Participants.`
     pdf: "/guides/poetry-recitation-guide.pdf",
     hasMultipleGuides: true,
     guides: [
-      { name: "U-17/Open", pdf: "/guides/poetry-u-17-open.pdf" },
-      { name: "Grade 6-8", pdf: "/guides/poetry-grade6-8.pdf" }
+      { name: "Urdu", pdf: "/guides/poetry-urdu.pdf" },
+      { name: "English", pdf: "/guides/poetry-english.pdf" }
     ],
     details: `The poetry recitation category will celebrate the rich tradition of poetry in Islam, blending spirituality with eloquence. Delegates will recite verses from renowned poets as well as original works, celebrating themes of faith, devotion, and reflection.
 
