@@ -237,7 +237,6 @@ Guidelines:
 - Technique: Calligraphy OR Still Life
 - Medium: Acrylic painting & Sketching (Still Life)
 - Canvas Size: 16" x 20"
-- Schedule: Setup at 9:30 AM, painting 10:00 AM - 3:00 PM
 
 Requirements:
 - Delegates must bring their own easels, palettes, acrylic paints, and canvas/card paper
