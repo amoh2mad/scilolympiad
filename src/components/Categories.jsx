@@ -50,7 +50,7 @@ Note: A list of acceptable and suggested Hamds, Naats, and poems will be uploade
     pdf: "/guides/islamic-quiz-guide.pdf",
     hasMultipleGuides: true,
     guides: [
-      { name: "U-17/Open", pdf: "/guides/islamic-quiz-u17-open.pdf" },
+      { name: "U-17/Open", pdf: "/guides/islamic-quiz-u-17-open.pdf" },
       { name: "Grade 6-8", pdf: "/guides/islamic-quiz-grade6-8.pdf" }
     ],
     details: `The Islamic Quiz category is designed to encourage learning and enthusiasm for Islamic heritage through engaging questions and challenges. It will test participants' knowledge of Makki/Madni life of our beloved Prophet (SAW) and his noble companions.
